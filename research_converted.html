@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="overflow-x:hidden">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="./favicon.ico" rel="icon" sizes="any"/>
+  <link href="./apple-touch-icon.png" rel="apple-touch-icon"/>
+
+
+  <style>
+    
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .marquee-content {
+      display: flex;
+      transition: transform 1s ease-in-out; /* Added transition property */
+    }
+
+    nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Set a fixed width to prevent wrapping */
+  white-space: nowrap; /* Prevent wrapping to the next line */
+  overflow-x: auto; /* Add horizontal scrolling for small screens */
+}
+  /* Button styles */
+.toggle-button {
+        position: fixed;
+        bottom: 20px; /* Adjust the desired distance from the bottom */
+        right: 20px; /* Adjust the desired distance from the right */
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's on top of other elements */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+ /* Dark mode styles */
+ body.dark {
+    background-color: #333;
+    color: #fff;
+    .text-xl{color: black;}
+    .text-3xl{color: green;}
+    .contact{color:white}
+    .basis-full{color: white;}
+    .res{color: white;}
+}
+
+body {
+  background-color: white;
+        .text-3xl{color: black;}
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    padding: 20px;
+    .text-xl {
+        color: black; 
+		text-align: justify;
+    }
+}
+
+  </style>
+  
+
+
+  <!-- script for adding slide in a class -->
+
+ <script>
+
+ function startCarousel() {
+  const marqueeContent = document.querySelector('.marquee-content');
+  const marqueeWidth = document.querySelector('.marquee').clientWidth;
+  const contentWidth = marqueeContent.offsetWidth;
+
+  const images = marqueeContent.querySelectorAll('img');
+  let currentIndex = 0;
+
+  function slide() {
+    marqueeContent.style.transition = 'transform 1s ease-in-out';
+    marqueeContent.style.transform = `translateX(-${currentIndex * marqueeWidth}px)`;
+
+    currentIndex++;
+    if (currentIndex >= images.length) {
+      currentIndex = 0;
+    }
+  }
+
+  setInterval(slide, 2000); // Adjust slide duration as needed
+ }
+
+ window.onload = startCarousel;
+
+
+ </script>
+   
+
+
+
+  <script>
+   !function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("vueuse-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()
+  </script>
+  <script async="" crossorigin="" src="./assets/app.bb61d067.js" type="module">
+  </script>
+  <link href="./assets/vendor.49fc3542.js" rel="modulepreload"/>
+  <style>
+   *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}a{color:inherit;text-decoration:inherit}body{margin:0;font-family:inherit;line-height:inherit}button{font-family:inherit;font-size:100%;line-height:1.15;margin:0;text-transform:none;background-color:transparent;background-image:none;padding:0;line-height:inherit;color:inherit}button{-webkit-appearance:button}button{cursor:pointer}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}h1,h2{font-size:inherit;font-weight:inherit}img{border-style:solid;display:block;vertical-align:middle;max-width:100%;height:auto}h1,h2,p{margin:0}:root{--prism-scheme:light;--prism-foreground:#6e6e6e;--prism-background:#f4f4f4;--prism-comment:#a8a8a8;--prism-string:#555555;--prism-literal:#333333;--prism-keyword:#000000;--prism-function:#4f4f4f;--prism-deleted:#333333;--prism-class:#333333;--prism-builtin:#757575;--prism-property:#333333;--prism-namespace:#4f4f4f;--prism-punctuation:#ababab;--prism-decorator:var(--prism-class);--prism-operator:var(--prism-punctuation);--prism-number:var(--prism-literal);--prism-boolean:var(--prism-literal);--prism-variable:var(--prism-literal);--prism-constant:var(--prism-literal);--prism-symbol:var(--prism-literal);--prism-interpolation:var(--prism-literal);--prism-selector:var(--prism-keyword);--prism-keyword-control:var(--prism-keyword);--prism-regex:var(--prism-string);--prism-json-property:var(--prism-property);--prism-inline-background:var(--prism-background);--prism-comment-style:italic;--prism-url-decoration:underline;--prism-line-number:#a5a5a5;--prism-line-number-gutter:#333333;--prism-line-highlight-background:#eeeeee;--prism-selection-background:#aaaaaa;--prism-marker-color:var(--prism-foreground);--prism-marker-opacity:.4;--prism-marker-font-size:.8em;--prism-font-size:1em;--prism-line-height:1.5em;--prism-font-family:monospace;--prism-inline-font-size:var(--prism-font-size);--prism-block-font-size:var(--prism-font-size);--prism-tab-size:2;--prism-block-padding-x:1em;--prism-block-padding-y:1em;--prism-block-margin-x:0;--prism-block-margin-y:.5em;--prism-block-radius:.3em;--prism-inline-padding-x:.3em;--prism-inline-padding-y:.1em;--prism-inline-radius:.3em}#app,body,html{height:100%;margin:0;padding:0}.icon-btn{cursor:pointer;display:inline-block;opacity:.75;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition-property:background-color,border-color,color,fill,stroke,opacity,-webkit-box-shadow,-webkit-transform,filter,backdrop-filter;-o-transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-box-shadow,transform,-webkit-transform,filter,backdrop-filter;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s;-webkit-transition-duration:.2s;-o-transition-duration:.2s;transition-duration:.2s;font-size:.9em}.icon-btn:hover{opacity:1;--tw-text-opacity:1;color:rgba(13,148,136,var(--tw-text-opacity))}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.bg-gray-200{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.bg-teal-300{--tw-bg-opacity:1;background-color:rgba(94,234,212,var(--tw-bg-opacity))}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border-0{border-width:0}.flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.inline-flex{display:-webkit-inline-box;display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex}.basis-full{flex-basis:100%}.flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex-wrap{-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.items-start{-webkit-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;align-items:flex-start}.items-center{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.justify-start{-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start}.flex-initial{-webkit-box-flex:0;-ms-flex:0 1 auto;-webkit-flex:0 1 auto;flex:0 1 auto}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.font-medium{font-weight:500}.h-4{height:1rem}.h-2{height:.5rem}.h-30{height:7.5rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.hover\:text-4xl:hover,.text-4xl{font-size:2.25rem;line-height:2.5rem}.m-3{margin:.75rem}.mx-auto{margin-left:auto;margin-right:auto}.my-3{margin-top:.75rem;margin-bottom:.75rem}.mt-5{margin-top:1.25rem}.mt-4{margin-top:1rem}.mt-1{margin-top:.25rem}.mb-5{margin-bottom:1.25rem}.ml-auto{margin-left:auto}.ml-1{margin-left:.25rem}.p-2{padding:.5rem}.p-5{padding:1.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.pt-8{padding-top:2rem}.pl-2{padding-left:.5rem}.pt-7{padding-top:1.75rem}.pb-150px{padding-bottom:150px}.pl-3{padding-left:.75rem}.fixed{position:fixed}.text-left{text-align:left}.text-center{text-align:center}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.uppercase{text-transform:uppercase}.hover\:underline:hover,.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.w-screen{width:100vw}.w-4{width:1rem}.w-10{width:2.5rem}.transition-all{-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s}.duration-500{-webkit-transition-duration:.5s;-o-transition-duration:.5s;transition-duration:.5s}.duration-100{-webkit-transition-duration:.1s;-o-transition-duration:.1s;transition-duration:.1s}.filter{--tw-blur:var(--tw-empty, );--tw-brightness:var(--tw-empty, );--tw-contrast:var(--tw-empty, );--tw-grayscale:var(--tw-empty, );--tw-hue-rotate:var(--tw-empty, );--tw-invert:var(--tw-empty, );--tw-saturate:var(--tw-empty, );--tw-sepia:var(--tw-empty, );--tw-drop-shadow:var(--tw-empty, );-webkit-filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.invert{--tw-invert:invert(100%)}.scroll-smooth{scroll-behavior:smooth}@media (min-width:640px){.sm\:m-0{margin:0}.sm\:mb-0{margin-bottom:0}.sm\:max-w-14\/14{max-width:100%}}@media (min-width:768px){.md\:rounded{border-radius:.25rem}.md\:rounded-lg{border-radius:.5rem}.md\:flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:mx-auto{margin-left:auto;margin-right:auto}.md\:mt-3{margin-top:.75rem}.md\:mr-auto{margin-right:auto}.md\:mt-0{margin-top:0}.md\:max-w-19\/20{max-width:95%}.md\:p-7{padding:1.75rem}.md\:pt-9{padding-top:2.25rem}.md\:pb-70px{padding-bottom:70px}.md\:text-center{text-align:center}}@media (min-width:768px) and (max-width:1023.9px){.\@md\:mb-1{margin-bottom:.25rem}}@media (min-width:1024px){.lg\:rounded-xl{border-radius:.75rem}.lg\:mx-auto{margin-left:auto;margin-right:auto}.lg\:mt-5{margin-top:1.25rem}.lg\:mb-1{margin-bottom:.25rem}.lg\:max-w-13\/14{max-width:92.857143%}.lg\:pb-70px{padding-bottom:70px}}@media (min-width:1280px){.xl\:flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.xl\:basis-full{flex-basis:100%}.xl\:flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.xl\:h-xl{height:36rem}.xl\:text-4xl{font-size:2.25rem;line-height:2.5rem}.xl\:mx-auto{margin-left:auto;margin-right:auto}.xl\:mr-10{margin-right:2.5rem}.xl\:ml-10{margin-left:2.5rem}.xl\:mb-5{margin-bottom:1.25rem}.xl\:px-40{padding-left:10rem;padding-right:10rem}.xl\:pt-10{padding-top:2.5rem}.xl\:pt-8{padding-top:2rem}.xl\:pr-10{padding-right:2.5rem}.xl\:pb-5{padding-bottom:1.25rem}.xl\:text-left{text-align:left}}@media (max-width:1023.9px){.\<lg\:text-3xl{font-size:1.875rem;line-height:2.25rem}}@media (max-width:767.9px){.\<md\:text-2xl{font-size:1.5rem;line-height:2rem}.\<md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.\<md\:my-5{margin-top:1.25rem;margin-bottom:1.25rem}.\<md\:mx-auto{margin-left:auto;margin-right:auto}.\<md\:ml-auto{margin-left:auto}.\<md\:p-3{padding:.75rem}.\<md\:px-20{padding-left:5rem;padding-right:5rem}.\<md\:pr-6{padding-right:1.5rem}.\<md\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.\<md\:w-screen{width:100vw}}.marquee{overflow:hidden;position:relative}.marquee-content{display:flex;white-space:nowrap}
+  </style>
+  <link as="style" href="/assets/app.2c82276b.css" rel="preload"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link crossorigin="" href="./assets/research.33f3b219.js" rel="modulepreload"/>
+  <link crossorigin="" href="./assets/Marquee.48ffba88.js" rel="modulepreload"/>
+  <link as="style" href="./assets/Marquee.82662069.css" rel="preload"/>
+  <title>
+   C G Lab NISER - Defeating Pain
+  </title>
+  <meta content="Defeating Pain" name="description"/>
+  <meta content="Pain, NISER, research, biology, defeating pain" name="keywords"/>
+  <meta content="2" name="head:count"/>
+ </head>
+ <body>
+  <div data-server-rendered="true" id="app">
+   <main class="text-center text-gray-700 dark:text-gray-200">
+    <div class="w-screen items-center fixed">
+      <header class="lg:mt-5 md:mt-3 lg:mx-auto md:mx-auto container lg:max-w-13/14 md:max-w-19/20 sm:max-w-14/14 sm:m-0" style="background-color: white; border-radius: 10px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); padding: 10px;">
+
+        <div class=" mx-auto flex nowrap p-2 flex-col md:flex-row items-start lg:rounded-xl md:rounded-lg transition-all duration-500 text-gray-500 &lt;md:text-white">
+          <nav class="ml-auto md:mr-auto flex flex-initial nowrap items-start text-start uppercase font-sans text-3xl justify-center" style="display: flex; align-items: center; overflow-x: scroll; width: 100%;">
+              <a aria-current="page" class="router-link-active router-link-exact-active hover:bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./research_converted.html">
+                  Research
+              </a>
+              <a class="hover-bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl" href="./people_converted.html">
+                  People
+              </a>
+              <span class="title-font font-medium items-center ">
+                  <a class="mt-1 text-4xl hover-underline xl:px-40 md:text-3xl &lt;md:text-3xl" draggable="false" href="./index.html">
+                      CG LAB
+                  </a>
+              </span>
+              <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./publications_converted.html">
+                  Publications
+              </a>
+              <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./gallery_converted.html">
+                  Gallery
+              </a>
+          </nav>
+     
+
+       <span class="border-0 py-1 px-3 mt-4 md:mt-0 inline-flex items-center w-4 h-4 ml-1">
+    </span>
+
+
+    <button class="toggle-button" id="toggleButton">
+      <svg height="1.2em" preserveaspectratio="xMidYMid meet" viewbox="0 0 32 32" width="1.2em">
+          <path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor">
+          </path>
+          <path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor">
+          </path>
+          <path d="M2 15.005h5v2H2z" fill="currentColor">
+          </path>
+          <path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor">
+          </path>
+          <path d="M15 25.005h2v5h-2z" fill="currentColor">
+          </path>
+          <path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor">
+          </path>
+          <path d="M25 15.005h5v2h-5z" fill="currentColor">
+          </path>
+          <path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor">
+          </path>
+          <path d="M15 2.005h2v5h-2z" fill="currentColor">
+          </path>
+         </svg>
+     </button>
+
+     
+
+
+      </div>
+     </header>
+    </div>
+    <div class="pb-150px md:pb-70px lg:pb-70px">
+    </div>
+    <!--[-->
+ 
+    <div class="marquee">
+        <div class="marquee-content pt-7" style="transform: translateX(-7325px);">
+         <img src="./img/research_pics/resized/microscope.jpg"/>
+         <img src="./img/research_pics/resized/tanishaa.jpg" alt="tanishaa">
+         <img src="./img/research_pics/resized/Ram_research.jpeg"/>
+         <img src="./img/research_pics/resized/raima.jpg" alt="raima">
+         <img src="./img/research_pics/resized/research1.jpg"/>
+         <img src="./img/research_pics/resized/research2.jpg"/>
+         <img src="./img/research_pics/resized/parna.jpg" alt="">
+         <img src="./img/research_pics/resized/shamit.jpg" alt="shamit">
+         <img src="./img/research_pics/resized/subham.jpg" alt="subahm">
+
+
+         <img src="./img/research_pics/resized/nilesh.jpg" alt="nilesh">
+
+
+        </div>
+       </div>
+
+    <div class="container mx-auto text-left">
+     <h1 class="res text-4xl underline pt-7 pl-3">
+      Research
+     </h1>
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" src="./img/research_pics/research/pro1.png" style="margin-top: 11%"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+          Molecular mechanisms of sensory transduction and ion channel signaling
+        </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          Sensory transduction is the process by which sensory stimuli are converted into electrical signals in the nervous system. TRP channels play a crucial role in this process by regulating the flow of ions in response to various sensory inputs such as temperature, pressure, taste,vision and pain. We are investigating the molecular mechanisms underlying sensory transduction and ion channel signaling, with a particular focus on TRP channels.
+        </p>
+       </div>
+      </div>
+     </div>
+
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" src="./img/research_pics/research/proj2.png" style="margin-top: 11%"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+          Crosstalk between TRP channels and the cytoskeleton in the pathophysiology of pain 
+        </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          Several recent reports suggest that different cytoskeletal elements as well as multiple receptors recognizing noxious stimuli contribute to pain signaling. Key molecular factors which are involved in acute and chronic pain have been identified which include TRP receptors. Interestingly, the involvement of the cytoskeletal microtubules in the chronification of pain has been speculated for a long time. We are the first to demonstrate the physical interaction between TRPV channels and the microtubule cytoskeleton. 
+         </p>
+       </div>
+      </div>
+     </div>
+     
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10" style="padding-top:5%">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" src="./img/ranbir model - Rokade Tejas Pravin.gif"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+          TRP Modulators in Osteoclastogenesis
+        </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          Bone related disorders such as osteoporosis have become a global health issue. Calcium homeostasis plays a pivotal role in the differentiation and maturation of bone cells such as osteoclasts. Our work examines the role of TRPs in osteoclast function and differentiation. We demonstrate that endogenous TRPV1 is instrumental in regulating the calcium influx crucial for osteoclast differentiation.
+        </p>
+       </div>
+      </div>
+     </div>
+
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10" style="padding-top:5%">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" src="./img/research_pics/research/proj4.png"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+         Importance of TRP channels in reproduction
+        </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          Ion channels have a significant role in sperm physiology. In this work, we are exploring the localisation and functioning of thermosensitive TRP channels in mammalian sperm. We are trying to identify the changes due to the modulation of these ion channels by using endogenous as well as exogenous modulators. We are using tools and techniques like CASA (Computer Assisted Semen Analysis), Confocal Microscopy, Super Resolution Microscopy, etc.
+        </div>
+      </div>
+     </div>
+     
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10" >
+        <img class="xl:h-40% xl:mx-auto xl:mb-5 md:mx-auto md:pt-9" src="./img/ram_model.jpg" style="align:center; width: 60%"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+          Role of TRPs in immune response against bacterial infections
+         </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          Involvement of TRPs in different skin functions is well reported. Our work demonstrates the importance of TRPV3 in skin wound healing and bacterial clearance. We report, for the first time, the endogenous expression of TRPV3 in macrophages. Our results indicate the role of TRPs as regulators of lysosomal functions as well as lysosomal storage disorders. Our findings also imply the action of TRPs as probable sensors of cellular stress. These outcomes may have broader implications in understanding cellular stress mechanisms and TRP channelopathies may have clinical relevance in bacterial infection treatment.
+        </p>
+       </div>
+      </div>
+     </div>
+
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10"style="padding-top: 5%">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" src="./img/mitochondrian model - Rokade Tejas Pravin.png"/>
+      </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+          Role of TRPs in regulation of subcellular metabolism
+        </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          TRPs are associated with the development of various symptoms and disorders such as neuropathic pain, sensory defects, muscular dystrophies, neurodegenerative disorders, skeletal dysplasia and skin disorders. In all these cases, abnormalities of organelles such as ER, mitochondria and lysosomes are prominent. We demonstrate that TRP channels localize to various subcellular locations in varied cell lines. Improper expression and/or function of TRPs
+          induce several organellar defects. TRPs are also involved in the regulation of ER and mitochondrial metabolism. These findings may aid in unraveling the significance of organelles in TRP-mediated channelopathies, possibly classifying them as organellar diseases.
+          </p>
+       </div>
+      </div>
+     </div>
+
+
+     
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" src="./img/ms 2model - Rokade Tejas Pravin.png"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+          Role of TRP channels in establishing inter-organellar contact points 
+         </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          Organellar metabolism including organelle distribution and calcium buffering abilities are relevant to the pathophysiology of several diseases and yet are poorly understood events. TRP channels are reported to regulate cellular and subcellular calcium levels, especially that of the ER, mitochondria, etc. The underlying mechanisms of the change in organellar dynamics upon modulation of TRP channels are ill explored. Our research sheds light into inter-organellar interactions at the single cell level. Our findings reveal the mechanisms of the establishment of ER-mitochondria contact by TRPs. 
+        </p>
+       </div>
+      </div>
+     </div>
+
+
+
+
+
+
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10" style="padding-top:7% ">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" src="./img/research_pics/research/proj8.png"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+          The Role of TRP Channels in Tumor Microenvironment  </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          The tumor microenvironment is a complex system that includes cancer cells, immune cells,
+          fibroblasts, and the extracellular matrix. TRP channels have been implicated in various aspects of cancer biology, such as cancer cell migration, proliferation, and the interaction between cancer cells and the immune system. Understanding the roles of TRP channels in the tumor microenvironment is essential for developing novel cancer therapies.
+          
+        </p>
+       </div>
+      </div>
+     </div>
+
+
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10" style="padding-top:5%">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9"  src="./img/TRPM8 research section.jpg"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+          Functional importance of thermosensitive TRP channels in inflammatory conditions 
+         </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+          Inflammatory disease conditions such as colitis, arthritis, neuronal inflammation, asthma, inflammatory bowel disease (IBD), brain inflammation, COPD and autoimmune diseases involve various cellular functions that implicate the role of thermosensitive TRP channels. Elucidating the role of these channels in diseased conditions will pave the way to novel therapeutic approaches.
+        </p>
+       </div>
+      </div>
+     </div>
+
+
+
+
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10" >
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" style="padding-top:20%" src="./img/research_pics/research/proj9.png"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5">
+        <h2 class="xl:text-4xl &lt;lg:text-3xl">
+         Regulation of vesicular recycling by TRP channels.
+        </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+         Receptor-mediated uptake, exocytosis, endocytosis, vesicle trafficking and recycling are complex cellular events which control several cellular functions. For neurons, such functions in turn control synaptic functions, release and/or uptake of specific neurotransmitters. Regulation of vesicular recycling also regulates the neuronal structures and connectivity. Interestingly, different thermosensitive TRP channels regulate these aspects in a very specific and unique manner. Using high-end imaging techniques we characterize these TRP-mediated vesicular recycling and membrane organization. Such understandings have broad importance in different neuronal as well as non-neuronal systems and have immense implications to dissect pathophysiological disorder at the cellular and molecular levels.
+        </p>
+       </div>
+      </div>
+     </div>
+
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+      <div class="xl:flex xl:flex-row">
+       <div class="xl:basis-full xl:h-xl xl:pt-10" style="padding-top:5%">
+        <img class="xl:h-100% xl:mx-auto md:mx-auto md:pt-9" src="./img/research_pics/research/proj10.png"/>
+       </div>
+       <div class="xl:basis-full xl:pt-8 xl:pr-10 xl:pb-5 md:p-7 p-5" >
+        <h2 class="xl:text-4xl &lt;lg:text-3xl" >
+         TRP channels in immune functions.
+        </h2>
+        <div class="bg-teal-300 w-10 h-2 my-3">
+        </div>
+        <p class="text-xl xl:text-left md:text-center">
+         Immune activation is a temperature dependent event and also needs massive Calcium influx. Indeed, so far several reports have suggested that TRP channels are present in the immune cells where diverse immune functions are regulated by this group of proteins. We investigate the importance of thermosensitive TRP ion channels in mammalian immune systems.
+        </p>
+       </div>
+      </div>
+     </div>
+
+
+
+     <div class="w-100% m-3 bg-gray-200 dark:bg-gray-800 xl:h-xl rounded-xl">
+
+
+     <h1 class="text-4xl pt-7 pl-3 uppercase font-sans" style="margin-top: 20px; text-align: center;">
+      <b>Fundings</b>
+  
+      
+     <h2 style="text-align: left; size: 50px;">        <p style="margin-top: 50px; margin-left: 20px;">
+      We gratefully acknowledge the extramural research funding from the DAE, DST, DBT, ICMR, CSIR-UGC and NISER.
+  
+     </p></h2>
+     
+    <div style="padding-top:7%; padding-left:2%; width:100%">
+
+<img src="./img/research_pics/Funding/dae_logo.png" style="width: 150px; height: auto; margin-right: 20px;margin-left: 20px; display: inline-block; " alt="">
+
+
+<img src="./img/research_pics/Funding/niser.png" style="width: 135px; height: auto; margin-right: 20px;  display: inline-block;" alt="">
+
+<img src="./img/research_pics/Funding/icmr_logo.png" style="width: 250px; height: auto; margin-right: 20px; display: inline-block; " alt="">
+
+<img src="./img/research_pics/Funding/dbt-logo.png" style="width: 135px; height: auto; margin-right: 20px; display: inline-block; " alt="">
+
+
+<img src="./img/research_pics/Funding/csir_logo.png" style="width: 200px; height: auto; margin-right: 20px; display: inline-block; " alt="">
+
+
+<img src="./img/research_pics/Funding/dst.png" style="width: 200px; height: auto; margin-right: 20px; display: inline-block; " alt="">
+
+</div>
+</h1>
+    </div>
+
+
+    </div>
+
+    <!--]-->
+<footer class="container mx-auto flex flex-row flex-col mt-5 mb-5 md:flex-row items-start lg:rounded-xl md:rounded w-screen">
+   <div id="sign" class="basis-full w-screen" >
+  <span id="sign_light">
+    <img alt="Dr. Chandan Goswami" class="filter invert invert-0 mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+  <span id="sign_dark">
+    <img alt="Dr. Chandan Goswami" class=" mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+</div>
+	 
+     
+	 
+	 
+<div class="basis-full w-screen">
+  <span id="logo_light">
+    <img alt="NISER logo" class="h-30  filter invert invert-0  mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+  <span id="logo_dark">
+    <img alt="NISER logo" class="h-30 mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+</div>
+
+     <div class="basis-full pt-8 &lt;md:p-3 &lt;md:mx-auto">
+        Managed by
+        <a class="contact pl-2" href="mailto:bhatiavikash999@gmail.com" target="__blank">
+         Vikash Kumar
+      </a>
+     </div>
+    </footer>
+
+	
+	
+   </main>
+  </div>
+  <script>
+   window.__INITIAL_STATE__='{"pinia":{}}'
+  </script>
+
+ <script>
+ const toggleButton = document.getElementById("toggleButton");
+const body = document.body;
+const signLight = document.getElementById("sign_light");
+const signDark = document.getElementById("sign_dark");
+const logoLight = document.getElementById("logo_light");
+const logoDark = document.getElementById("logo_dark");
+// Function to set the theme
+function setTheme(theme) {
+    if (theme === "dark") {
+        body.classList.add("dark");
+        signLight.style.display = "none";
+        signDark.style.display = "block";
+		logoLight.style.display = "none";
+        logoDark.style.display = "block";
+    } else {
+        body.classList.remove("dark");
+        signLight.style.display = "block";
+        signDark.style.display = "none";
+		logoLight.style.display = "block";
+        logoDark.style.display = "none";
+    }
+}
+
+// Toggle the theme when the button is clicked
+toggleButton.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
+// Initialize the theme based on user preference
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDarkMode) {
+    setTheme("dark");
+} else {
+    setTheme("light");
+}
+
+</script>>
+  
+
+  
+ </body>
+</html>

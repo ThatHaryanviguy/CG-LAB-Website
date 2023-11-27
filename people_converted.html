@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="overflow-x:hidden">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="/favicon.ico" rel="icon" sizes="any"/>
+  <link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+  <script>
+   !function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("vueuse-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()
+  </script>
+ 
+
+
+
+
+
+  <style>
+   *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}a{color:inherit;text-decoration:inherit}body{margin:0;font-family:inherit;line-height:inherit}button{font-family:inherit;font-size:100%;line-height:1.15;margin:0;text-transform:none;background-color:transparent;background-image:none;padding:0;line-height:inherit;color:inherit}button{-webkit-appearance:button}button{cursor:pointer}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}h1,h2{font-size:inherit;font-weight:inherit}img{border-style:solid;display:block;vertical-align:middle;max-width:100%;height:auto}h1,h2,p{margin:0}:root{--prism-scheme:light;--prism-foreground:#6e6e6e;--prism-background:#f4f4f4;--prism-comment:#a8a8a8;--prism-string:#555555;--prism-literal:#333333;--prism-keyword:#000000;--prism-function:#4f4f4f;--prism-deleted:#333333;--prism-class:#333333;--prism-builtin:#757575;--prism-property:#333333;--prism-namespace:#4f4f4f;--prism-punctuation:#ababab;--prism-decorator:var(--prism-class);--prism-operator:var(--prism-punctuation);--prism-number:var(--prism-literal);--prism-boolean:var(--prism-literal);--prism-variable:var(--prism-literal);--prism-constant:var(--prism-literal);--prism-symbol:var(--prism-literal);--prism-interpolation:var(--prism-literal);--prism-selector:var(--prism-keyword);--prism-keyword-control:var(--prism-keyword);--prism-regex:var(--prism-string);--prism-json-property:var(--prism-property);--prism-inline-background:var(--prism-background);--prism-comment-style:italic;--prism-url-decoration:underline;--prism-line-number:#a5a5a5;--prism-line-number-gutter:#333333;--prism-line-highlight-background:#eeeeee;--prism-selection-background:#aaaaaa;--prism-marker-color:var(--prism-foreground);--prism-marker-opacity:.4;--prism-marker-font-size:.8em;--prism-font-size:1em;--prism-line-height:1.5em;--prism-font-family:monospace;--prism-inline-font-size:var(--prism-font-size);--prism-block-font-size:var(--prism-font-size);--prism-tab-size:2;--prism-block-padding-x:1em;--prism-block-padding-y:1em;--prism-block-margin-x:0;--prism-block-margin-y:.5em;--prism-block-radius:.3em;--prism-inline-padding-x:.3em;--prism-inline-padding-y:.1em;--prism-inline-radius:.3em}#app,body,html{height:100%;margin:0;padding:0}.icon-btn{cursor:pointer;display:inline-block;opacity:.75;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition-property:background-color,border-color,color,fill,stroke,opacity,-webkit-box-shadow,-webkit-transform,filter,backdrop-filter;-o-transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-box-shadow,transform,-webkit-transform,filter,backdrop-filter;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s;-webkit-transition-duration:.2s;-o-transition-duration:.2s;transition-duration:.2s;font-size:.9em}.icon-btn:hover{opacity:1;--tw-text-opacity:1;color:rgba(13,148,136,var(--tw-text-opacity))}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.bg-gray-200{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.bg-blue-200{--tw-bg-opacity:1;background-color:rgba(191,219,254,var(--tw-bg-opacity))}.rounded{border-radius:.25rem}.rounded-md{border-radius:.375rem}.border-0{border-width:0}.flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.inline-flex{display:-webkit-inline-box;display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex}.grid{display:-ms-grid;display:grid}.basis-full{flex-basis:100%}.flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex-wrap{-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.items-start{-webkit-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;align-items:flex-start}.items-center{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.justify-start{-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start}.flex-initial{-webkit-box-flex:0;-ms-flex:0 1 auto;-webkit-flex:0 1 auto;flex:0 1 auto}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.font-medium{font-weight:500}.h-4{height:1rem}.h-130{height:32.5rem}.h-120{height:30rem}.h-50{height:12.5rem}.h-30{height:7.5rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.hover\:text-4xl:hover,.text-4xl{font-size:2.25rem;line-height:2.5rem}.mx-8{margin-left:2rem;margin-right:2rem}.mx-auto{margin-left:auto;margin-right:auto}.mt-5{margin-top:1.25rem}.mt-4{margin-top:1rem}.mt-1{margin-top:.25rem}.mb-5{margin-bottom:1.25rem}.ml-auto{margin-left:auto}.ml-1{margin-left:.25rem}.p-6{padding:1.5rem}.p-2{padding:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.pt-8{padding-top:2rem}.pl-2{padding-left:.5rem}.pt-7{padding-top:1.75rem}.pb-150px{padding-bottom:150px}.pl-3{padding-left:.75rem}.pt-10{padding-top:2.5rem}.pl-8{padding-left:2rem}.pt-14{padding-top:3.5rem}.pb-10{padding-bottom:2.5rem}.fixed{position:fixed}.text-left{text-align:left}.text-center{text-align:center}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.uppercase{text-transform:uppercase}.hover\:underline:hover,.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.w-screen{width:100vw}.w-4{width:1rem}.transition-all{-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s}.duration-500{-webkit-transition-duration:.5s;-o-transition-duration:.5s;transition-duration:.5s}.duration-100{-webkit-transition-duration:.1s;-o-transition-duration:.1s;transition-duration:.1s}.filter{--tw-blur:var(--tw-empty, );--tw-brightness:var(--tw-empty, );--tw-contrast:var(--tw-empty, );--tw-grayscale:var(--tw-empty, );--tw-hue-rotate:var(--tw-empty, );--tw-invert:var(--tw-empty, );--tw-saturate:var(--tw-empty, );--tw-sepia:var(--tw-empty, );--tw-drop-shadow:var(--tw-empty, );-webkit-filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.invert{--tw-invert:invert(100%)}.scroll-smooth{scroll-behavior:smooth}@media (min-width:640px){.sm\:m-0{margin:0}.sm\:mb-0{margin-bottom:0}.sm\:max-w-14\/14{max-width:100%}.sm\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}}@media (min-width:768px){.md\:rounded{border-radius:.25rem}.md\:rounded-lg{border-radius:.5rem}.md\:flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:mx-auto{margin-left:auto;margin-right:auto}.md\:mt-3{margin-top:.75rem}.md\:mr-auto{margin-right:auto}.md\:mt-0{margin-top:0}.md\:max-w-19\/20{max-width:95%}.md\:pb-70px{padding-bottom:70px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:768px) and (max-width:1023.9px){.\@md\:mb-1{margin-bottom:.25rem}}@media (min-width:1024px){.lg\:rounded-xl{border-radius:.75rem}.lg\:mx-auto{margin-left:auto;margin-right:auto}.lg\:mt-5{margin-top:1.25rem}.lg\:mb-1{margin-bottom:.25rem}.lg\:max-w-13\/14{max-width:92.857143%}.lg\:pb-70px{padding-bottom:70px}}@media (min-width:1280px){.xl\:mr-10{margin-right:2.5rem}.xl\:ml-10{margin-left:2.5rem}.xl\:px-40{padding-left:10rem;padding-right:10rem}.xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}@media (max-width:767.9px){.\<md\:text-2xl{font-size:1.5rem;line-height:2rem}.\<md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.\<md\:my-5{margin-top:1.25rem;margin-bottom:1.25rem}.\<md\:mx-auto{margin-left:auto;margin-right:auto}.\<md\:ml-auto{margin-left:auto}.\<md\:p-3{padding:.75rem}.\<md\:px-20{padding-left:5rem;padding-right:5rem}.\<md\:pr-6{padding-right:1.5rem}.\<md\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.\<md\:w-screen{width:100vw}}
+   .toggle-button {
+        position: fixed;
+        bottom: 20px; /* Adjust the desired distance from the bottom */
+        right: 20px; /* Adjust the desired distance from the right */
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's on top of other elements */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+ /* Dark mode styles */
+
+ nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Set a fixed width to prevent wrapping */
+  white-space: nowrap; /* Prevent wrapping to the next line */
+  overflow-x: auto; /* Add horizontal scrolling for small screens */
+}
+
+ body {
+  background-color: white;
+  .text-4xl{color: black;}
+  .text-3xl{color: black;}
+ }
+body.dark {
+    background-color: #333;
+    color: #fff;
+    .text-xl{color: black;}
+    .text-3xl{color: green;}
+    .text-4xl{color: green;}
+    .contact{color:white}
+    .basis-full{color: white;}
+    .headin{color: white;}
+    .ordered_list{color: white;}
+}
+
+img:not(.exclude) {
+
+width: 200px;
+height: 300px;
+object-fit: cover;
+
+}
+
+
+
+/* Hide the responsive-span by default */
+.responsive-span {
+  display: block;
+}
+
+/* Show the responsive-span on small screens (e.g., mobile devices) */
+@media (max-width: 767px) {
+  .responsive-span {
+    display: none;
+  }
+}
+
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Add margin or padding to create space between elements */
+.basis-full {
+  margin: 10px; /* You can adjust the value to your preference */
+}
+
+
+ </style>
+  
+ 
+  <title>
+   C G Lab NISER - Defeating Pain
+  </title>
+  <meta content="Defeating Pain" name="description"/>
+  <meta content="Pain, NISER, research, biology, defeating pain" name="keywords"/>
+  <meta content="2" name="head:count"/>
+ </head>
+ <body>
+  <div data-server-rendered="true" id="app">
+<main class="text-center text-gray-700 dark:text-gray-200">
+	
+ <div id="myHeader" class="w-screen items-center fixed" >
+       <header id="myHeader" class=" lg:mt-5 md:mt-3 lg:mx-auto md:mx-auto container lg:max-w-13/14 md:max-w-19/20 sm:max-w-14/14 sm:m-0" style="background-color: white; border-radius: 10px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); ">
+        <div class=" mx-auto flex nowrap p-2 flex-col md:flex-row items-start lg:rounded-xl md:rounded-lg transition-all duration-500 text-gray-500 &lt;md:text-white" ">
+          <nav class="ml-auto md:mr-auto flex flex-initial nowrap items-start text-start uppercase font-sans text-3xl justify-center" style="display: flex; align-items: center; overflow-x: scroll; width: 100%;">
+              <a aria-current="page" class="router-link-active router-link-exact-active hover:bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./research_converted.html">
+                  Research
+              </a>
+              <a class="hover-bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl" href="./people_converted.html">
+                  People
+              </a>
+              <span class="title-font font-medium items-center ">
+                  <a class="mt-1 text-4xl hover-underline xl:px-40 md:text-3xl &lt;md:text-3xl" draggable="false" href="./index.html">
+                      CG LAB
+                  </a>
+              </span>
+              <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./publications_converted.html">
+                  Publications
+              </a>
+              <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./gallery_converted.html">
+                  Gallery
+              </a>
+          </nav>
+     
+
+       <span class="border-0 py-1 px-3 mt-4 md:mt-0 inline-flex items-center w-4 h-4 ml-1">
+       </span>
+
+
+       <button class="toggle-button" id= "toggleButton"title="Toggle dark mode">
+        <svg height="1.2em" preserveaspectratio="xMidYMid meet" viewbox="0 0 32 32" width="1.2em">
+         <path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor">
+         </path>
+         <path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor">
+         </path>
+         <path d="M2 15.005h5v2H2z" fill="currentColor">
+         </path>
+         <path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor">
+         </path>
+         <path d="M15 25.005h2v5h-2z" fill="currentColor">
+         </path>
+         <path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor">
+         </path>
+         <path d="M25 15.005h5v2h-5z" fill="currentColor">
+         </path>
+         <path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor">
+         </path>
+         <path d="M15 2.005h2v5h-2z" fill="currentColor">
+         </path>
+        </svg>
+       </button>
+
+			
+		</div>
+	</header>
+</div>
+  
+    <!--[-->
+<div class= "container mx-auto  " style="display: flex; justify-content: center; align-items: center;">
+	
+      <img class=" pt-7 exclude" src="./img/EMBO_group.jpg" style="height: auto; width: 100%; margin-top:5%" />
+</div>
+
+    <div class="container mx-auto text-left">
+     <h1 class=" text-4xl headin underline pt-7 pl-3">
+      People
+     </h1>
+     <h2 class="text-3xl headin pt-7 pl-8">
+      Principal Investigator
+    </h2>
+<div>
+
+   
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">
+      <div class="bg-gray-200 dark:bg-gray-800 h-120 rounded flex flex-col items-center p-6 text-center w-1/2">
+        <img alt="Dr. Chandan Goswami" class="w-100% h-50 rounded" src="./img/CG.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+          Dr. Chandan Goswami
+        </p>
+        <p class="font-sans">
+          Professor
+        </p>
+        <p class="mt-1">
+          PhD: Freie Universität Berlin, Germany
+        </p>
+        <p>
+          Post-doc: Max Planck Institute for Molecular Genetics, Berlin, Germany.
+        </p>
+      </div>
+      <div class="w-1/2 pl-8 ">
+  <p class="text-xl ordered_list">
+  Education
+  </p>
+  <ol class="ordered_list"  style=" text-align: justify;">
+  <li>
+    B.Sc(Ag)Hons, Bidhan Chandra Krishi Viswa Vidyalaya, West Bengal, India (Aug 1991- Dec 1995)
+
+  </li>
+ <li>        M.Sc in Biotechnology, Jawaharlal Nehru University, New Delhi, India (1st Aug 1996- Jul 1998)
+</li>
+
+<li>
+
+  Research fellow at National Centre for Biological Science, Bangalore, India (1st Aug 1998-15th Jan 2002)
+       
+</li>
+ <li>
+
+  Research fellow at Dept of Biochemistry, Indian Institute of Science, Bangalore, India (1st Feb 2002-31st May 2002)
+       
+ </li>
+
+ <li>    PhD thesis work at the Dept of Biochemistry, Freie University of Berlin, Germany  (1st Jun 2002-31st Dec 2005)
+</li>
+      <li>
+        Post doctoral fellow at Max Planck Institute for Molecular Genetics, Berlin, Germany (1st Jan 2006-15th July 2009)
+  
+       </li>
+
+      </ol>
+
+<p class="text-xl ordered_list" >Positions held
+</p>
+<ol class="ordered_list"  style=" text-align: justify;">
+  <li>
+    Faculty member (July 2009 - Present), School of Biological Sciences, National Institute of Science Education and Research (NISER), Bhubaneswar, India
+  </li>
+  <li>
+    Chairperson (July 2016 - June 2019), School of Biological Sciences, National Institute of Science Education and Research (NISER), Bhubaneswar, India
+  </li>
+    <li>
+    DAAD Research Ambassador, India (2017 - 2022)</li>
+</ol>
+</div>
+     </div>
+    </div>
+
+<div>
+     <h2 class="text-3xl headin pt-7 pl-8">
+      Post Doc Fellows
+    </h2>
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 rounded flex flex-col items-center p-6 text-center">
+        <div class="bg-gray-200 dark:bg-gray-800 h-120 rounded flex flex-col items-center p-6 text-center">  <img alt= "Satish" class="w-100% h-50 rounded" src="img/satish.jpeg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+          Dr. Satish Kumar
+        </p>
+        <p class="font-sans">
+          Post-Doctoral fellow
+
+         
+        </p>
+        <p class="mt-1">
+          Working on TRPV4 in mitochondria and bone cells.
+        </p>
+
+      </div>
+
+
+    </div>
+
+      <div class="w-1/2 pl-8 ">
+<p class="text-xl">
+</p>
+</div>
+</div>
+<div style="background-color: white;">
+
+  <h2 class="text-4xl headin pt-7 pl-8 uppercase " style="text-align: center; color: #000000; font-family: 'Times New Roman';">
+    <b>Present Students </b>
+   </h2>
+ </div>
+
+<h2 class="text-3xl headin pt-7 pl-8">
+  PhD Students
+</h2>
+     <div class="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+      
+
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Ram Prasad Sahu" class="w-100% h-50 rounded" src="./img/FB_IMG_1638814939089 - Ram Prasad Sahu.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Ram Prasad Sahu
+        </p>
+        <p class="font-sans">
+         Graduate Student
+        </p>
+        <p class="mt-1">
+         Working on TRPV3 channel. Interested in reading, music and playing musical instruments.
+        </p>
+       </div>
+      </div>
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Nishant Kumar Dubey" class="w-100% h-50 rounded" src="./img/nishant3.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Nishant Kumar Dubey
+        </p>
+        <p class="font-sans">
+         Graduate Student
+        </p>
+        <p class="mt-1">
+         Working on TRPV4 channel.
+        </p>
+       </div>
+      </div>
+      
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Sushama Mohanta" class="w-100% h-50 rounded" src="./img/IMG-20211031-WA0008 - Sushama Mohanta.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Sushama Mohanta
+        </p>
+        <p class="font-sans">
+         Graduate Student
+        </p>
+        <p class="mt-1">
+         Working on TRPV1.
+        </p>
+       </div>
+      </div>
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Deep Shikha" class="w-100% h-50 rounded" src="./img/Deep_Shikha.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Deep Shikha
+        </p>
+        <p class="font-sans">
+         Graduate Student
+        </p>
+        <p class="mt-1">
+         Working on TRPA1,TRPM8, DRG Neuron and microglia cells.
+        </p>
+       </div>
+      </div>
+
+
+<div class="h-130">
+        <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+         <img alt="Barsha Tripathy" class="w-100% h-50 rounded" src="./img/people/barsha_2.jpg"/>
+         <p class="text-xl mt-4 uppercase font-medium font-sans">
+          Barsha Tripathy
+         </p>
+         <p class="font-sans">
+          Graduate Student
+         </p>
+         <p class="mt-1">
+          Working on in-silico analysis of lipid interactions in ion channels.
+         </p>
+        </div>
+       </div>
+
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+         <img alt="Parnasree Mahapatra" class="w-100% h-50 rounded" src="./img/Parnshree.jpg"/>
+         <p class="text-xl mt-4 uppercase font-medium font-sans">
+          Parnasree Mahapatra
+         </p>
+         <p class="font-sans">
+          Graduate Student
+         </p>
+         <p class="mt-1">
+          Working on TRPV4/M8.
+         </p>
+        </div>
+       </div>
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Anupriya Chattapadhya" class="w-100% h-50 rounded" src="./img/Anupriya2.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+        Anupriya Chattapadhya
+        </p>
+        <p class="font-sans">
+         Graduate Student
+        </p>
+        <p class="mt-1">
+         Working on TRPV3.
+        </p>
+       </div>
+      </div>
+     </div>
+     <h2 class="text-3xl headin pt-7 pl-8">
+      Masters Students
+     </h2>
+     <div class="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Subham Mishra" class="w-100% h-50 rounded" src="./img/subham.jpeg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Subham Mishra
+        </p>
+        <p class="font-sans">
+         Master's Student (2019-24)
+        </p>
+        <p class="mt-1">
+         Working on TRPV4.
+        </p>
+       </div>
+      </div>
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Nilesh Kumar Das" class="w-100% h-50 rounded" src="./img/nilesh.jpeg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Nilesh Kumar Das
+        </p>
+        <p class="font-sans">
+         Master's Student (2019-24)
+        </p>
+        <p class="mt-1">
+         Working on TRPV1 and pain.
+        </p>
+       </div>
+      </div>
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Raima Singh" class="w-100% h-50 rounded" src="./img/raima.jpeg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Raima Singh
+        </p>
+        <p class="font-sans">
+         Master's Student (2019-24)
+        </p>
+        <p class="mt-1">
+         Working on TRPM8.
+        </p>
+       </div>
+      </div>
+ 
+
+
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Tanisha Aswin" class="w-100% h-50 rounded" src="./img/tanisha.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Tanishaa Aswin
+        </p>
+        <p class="font-sans">
+         Master's Student (2023-25)
+        </p>
+        <p class="mt-1">
+        Exploring TRPV3.
+        </p>
+       </div>
+      </div>
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Ramizur Rahaman Halder" class="w-100% h-50 rounded" src="./img/people/ramizur.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Ramizur Rahaman Halder
+        </p>
+        <p class="font-sans">
+         Master's Student (2023-25)
+        </p>
+        <p class="mt-1">
+         Working on TRPM8.
+        </p>
+       </div>
+      </div>
+ 
+
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Vikash Kumar" class="w-100% h-50 rounded" src="./img/people/Bhatia2.jpg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Vikash Kumar
+        </p>
+        <p class="font-sans">
+         Master's Student (2023-25)
+        </p>
+        <p class="mt-1">
+        Working on protein interactions through MD Simulation studies.
+        </p>
+       </div>
+      </div>
+
+     </div>
+     <h2 class="text-3xl headin pt-7 pl-8">
+      Project Students
+     </h2>
+     <div class="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+     
+
+
+      <div class="h-130">
+       <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+        <img alt="Shweta" class="w-100% h-50 rounded" src="./img/shweta.jpeg"/>
+        <p class="text-xl mt-4 uppercase font-medium font-sans">
+         Shweta
+        </p>
+        <p class="font-sans">
+         Project Student
+        </p>
+        <p class="mt-1">
+         PhD student from KIIT institute
+        </p>
+       </div>
+      </div>
+
+     </div>
+     <div style="background-color: white;">
+
+      <h2 class="text-4xl headin pt-7 pl-8 uppercase " style="text-align: center; color: #000000; font-family: 'Times New Roman';">
+        <b>Alumni </b>
+       </h2>
+     </div>
+
+     <h2 class="text-3xl headin pt-7 pl-8">
+     Former PhD Students
+     </h2>
+
+     <div class="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+
+
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Ashutosh Kumar (2010-2016)" class="w-100% h-50 rounded" src="./img/ashutosh.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium ">
+            Dr. Ashutosh Kumar (2010-2016)
+          </p>
+          <p class="font-sans" >
+          </p>
+        
+          <p class="mt-1">
+           Senior post-doc fellow at Washington University, School of Medicine, USA.
+          </p>
+        </div>
+      </div>
+	  
+	  
+	        <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Manoj Yadav (2012-2017)" class="w-100% h-50 rounded" src="./img/manoj.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Dr. Manoj Yadav (2012-2017)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1">
+            Post-doc fellow at National Institute of Health (NIH), Bethesda, USA from 2019.
+          </p>
+        </div>
+      </div>
+	  
+	        
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Rakesh Kumar Majhi (2012-2017)" class="w-100% h-50 rounded" src="./img/rakesh.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Dr. Rakesh Kumar Majhi (2012-2017)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1">
+           Assistant Professor at IIT Kanpur since 2022.
+          </p>
+        </div>
+      </div>
+	  
+	  
+	        <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Somdatta Saha (2014-2020)" class="w-100% h-50 rounded" src="./img/somadatta2.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Dr. Somdatta Saha (2014-2020)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1">
+            Post-doc fellow at Virginia Commonwealth University, USA since 2021.
+          </p>
+        </div>
+      </div>
+	  
+	  
+	        <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Rashmita Das (2015-2022)" class="w-100% h-50 rounded" src="./img/rashmita.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Dr. Rashmita Das (2015-2022)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1">
+            PhD completed in 2022.
+          </p>
+        </div>
+      </div>
+      
+      
+	  
+	  	        <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Tusar Kanta Acharya " class="w-100% h-50 rounded" src="./img/tusar.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Dr. Tusar Kanta Acharya (2017-2023)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1">
+           Post Doc fellow at MD Anderson Cancer Center, The University of Texas since 2023. 
+          </p>
+        </div>
+      </div>
+	  
+	  
+</div>
+<div>
+
+      <h2 class="text-3xl headin pt-7 pl-8">
+        Former MSc Students
+        </h2>
+        <div class="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+
+
+
+          
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Pushpendu Sardar (2010-2012)" class="w-100% h-50 rounded" src="./img/Pushpendu.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Dr. Pushpendu Sardar (2010-2012)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1">
+            Post-doc fellow at Cambridge University, UK since Sept 2021.
+          </p>
+        </div>
+      </div>
+      
+	  
+      
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Shikha Kumari (2012-2014)" class="w-100% h-50 rounded" src="./img/Sikha.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Dr. Shikha Kumari (2012-2014)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1">
+            Post-doc fellow at Wellcome Center for Integrative Parasitology, University of Glasgow since 2020.
+          </p>
+        </div>
+      </div>
+	  
+
+      
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Dr. Anurag Priyadarshi (2013-2015)" class="w-100% h-50 rounded" src="./img/Anurag.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans" style="font-size: large;">
+            Dr. Anurag Priyadarshi (2013-15)
+          </p>
+  
+          <p class="mt-1">
+             Post-doc fellow at National Institute of Health, USA.
+          </p>
+        </div>
+      </div>
+	  
+	  
+      
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Arijit Ghosh (2012-2016)" class="w-100% h-50 rounded" src="./img/arjith.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+           Dr. Arijit Ghosh (2014-2016)
+          </p>
+          <p class="mt-1">
+            Post-doc fellow at National Heart, Lungs, and Blood Institute, USA.
+          </p>
+        </div>
+      </div>
+
+      
+
+
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Nikhil Tiwari (2016-208)" class="w-100% h-50 rounded" src="./img/Nikhil.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Nikhil Tiwari (2016-2018)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1">
+            PhD student at Leibniz-Institut für Neurobiologie (LIN), Magdeburg, Germany.
+          </p>
+        </div>
+      </div>
+    
+	
+	    
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Tanaya Saha (2016-2018)" class="w-100% h-50 rounded" src="./img/Tanaya.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Tanaya Saha <br>(2016-2018)
+          </p>
+          <p class="font-sans">
+        
+          </p>
+          <p class="mt-1">
+            Joined as a JRF at NII, New Delhi since 2018.
+          </p>
+        </div>
+      </div>
+      
+
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Aiswarya Shivanand (2016-2018)" class="w-100% h-50 rounded" src="./img/Aiswarya.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Aiswarya Shivanand <br> (2016-2018)
+          </p>
+          <p class="font-sans">
+         
+          </p>
+          <p class="mt-1">
+            JRF at Indian Institute of Science since 2019.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Divyanshi (2017-2019)" class="w-100% h-50 rounded" src="./img/divyanshi.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Divyanshi <br> (2017-2019)
+          </p>
+          <p class="font-sans">
+           
+          </p>
+          <p class="mt-1">
+            Joined University of Illinois at Urbana-Champaign as a PhD student since Oct 2018.
+          </p>
+        </div>
+      </div>
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Stuti Gupta (2017-2019)" class="w-100% h-50 rounded" src="./img/stuti.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Stuti Gupta <br> (2017-2019)
+          </p>
+          <p class="font-sans">
+        
+          </p>
+          <p class="mt-1">
+            Joined University of Iowa, USA as a PhD student since 2019.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Subhadra Majhi (2014-2019)" class="w-100% h-50 rounded" src="./img/Subhadra.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Subhadra Majhi <br> (2017-2019)
+          </p>
+          <p class="font-sans">
+
+          </p>
+          <p class="mt-1">
+            SPCB assistant environmental scientist.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Samikshya Sucharita (2017-2019)" class="w-100% h-50 rounded" src="./img/Samikshya.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans" style="font-size: large;">
+            Samikshya Sucharita <br> (2017-2019)
+          </p>
+          <p class="font-sans">
+
+          </p>
+          <p class="mt-1">
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Priyadarshan Pradhan (2018-2020)" class="w-100% h-50 rounded" src="./img/priyadharshan.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Priyadarshan Pradhan (2018-2020)
+          </p>
+          <p class="font-sans">
+            
+          </p>
+          <p class="mt-1">
+            Lecturer of Zoology at Govt. Model degree college, Sonepur.
+          </p>
+        </div>
+      </div>
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Srujanika (2016-2021)" class="w-100% h-50 rounded" src="./img/srujanika.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Srujanika <br> (2019-2021)
+          </p>
+          <p class="mt-1">
+            PhD student in Instem, Bangalore since 2021.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Aniket Modak (2017-2022)" class="w-100% h-50 rounded" src="./img/aniket modak.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Aniket Modak (2019-2021)
+          </p>
+          <p class="font-sans">
+            
+          </p>
+          <p class="mt-1">
+            MBA student at IIM, Ahmedabad since 2022.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Anushka Jain (2017-2022)" class="w-100% h-50 rounded" src="./img/IMG_20190509_084727 - Anushka Jain.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Anushka Jain <br> (2020-2022)
+          </p>
+
+          <p class="mt-1">
+            PhD student at University of Rochester, USA since 2022.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Ritesh Dalai" class="w-100% h-50 rounded" src="./img/ritesh.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Ritesh Dalai <br>(2020-23)
+          </p>
+          <p class="font-sans">
+          </p>
+          <p class="mt-1" style="font-size: small;">
+            Passionate about coding and simulating molecular interactions of protein channels, worked on TRPV3 and TRPV4 channels.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Shamit Kumar" class="w-100% h-50 rounded" src="./img/IMG_20220116_151557_308 - Shamit Kumar.jpg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Shamit Kumar  (2021-23)
+          </p>
+          <p class="font-sans">
+          
+          </p>
+          <p class="mt-1">
+            PhD student at Max Planck Institute for Heart and Lung, Germany.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Tejas Pravin Rokade" class="w-100% h-50 rounded" src="./img/tejas.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Tejas Pravin Rokade (2021-23)
+          </p>
+
+          <p class="mt-1">
+            PhD student at University of Illinois Chicago.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Shreya Soni" class="w-100% h-50 rounded" src="./img/shreya.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Shreya Soni <br>(2021-23)
+          </p>
+          <p class="font-sans">
+             
+          </p>
+          <p class="mt-1">
+            Worked on TRPV4 and aquaporins in fish cells.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark-bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+          <img alt="Harshit Haldua" class="w-100% h-50 rounded" src="./img/harshit.jpeg"/>
+          <p class="text-xl mt-4 uppercase font-medium font-sans">
+            Harshit Haldua <br> (2021-23)
+          </p>
+          <p class="font-sans">
+           
+          </p>
+          <p class="mt-1">
+            Worked on TRPM2.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <h2 class="text-3xl headin pt-7 pl-8">
+     Project Students and Fellows
+    </h2>
+    <div class="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+         <img alt="Ranabir Chakraborty" class="w-100% h-50 rounded" src="./img/Ranabir.jpeg"/>
+         <p class="text-xl mt-4 uppercase font-medium font-sans">
+          Ranabir Chakraborty (2021-2022)
+         </p>
+         <p class="font-sans">
+         </p>
+         <p class="mt-1">
+          PhD student at Institut Pasteur, Paris France since 2022.
+         </p>
+        </div>
+       </div>
+
+
+
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+         <img alt="Dr. Ankit Tiwari" class="w-100% h-50 rounded" src="./img/people/Ankit.jpeg"/>
+         <p class="text-xl mt-4 uppercase font-medium font-sans">
+          Dr. Ankit Tiwari <br> (2018-2019)
+         </p>
+         <p class="font-sans">
+         </p>
+         <p class="mt-1">
+           Post doctoral fellow at Cold Spring Harbor Lab, USA
+         </p>
+        </div>
+       </div>
+
+
+
+      <div class="h-130">
+        <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+         <img alt=" Dr. Nirlipta Swain" class="w-100% h-50 rounded" src="./img/people/Nirlipta.jpeg"/>
+         <p class="text-xl mt-4 uppercase font-medium font-sans">
+          Dr. Nirlipta Swain <br> (2012-2014)
+         </p>
+         <p class="font-sans">
+         </p>
+         <p class="mt-1">
+          Assistant professor at Department of Higher Education, Govt.of Odisha 
+         </p>
+        </div>
+       </div>
+</div>
+
+
+  <h2 class="text-3xl headin pt-7 pl-8">
+     Visiting Students
+    </h2>
+    <div class="grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+
+
+     <div class="h-130">
+      <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+       <img alt="Anushka Banerjee" class="w-100% h-50 rounded" src="./img/Anushka.jpeg"/>
+       <p class="text-xl mt-4 uppercase font-medium font-sans">
+        Anushka Banerjee (2023)
+       </p>
+       <p class="font-sans">
+         PhD student at IIT Kanpur since 2023.
+       </p>
+       <p class="mt-1">
+       </p>
+      </div>
+     </div>
+     <div class="h-130">
+      <div class="bg-gray-200 dark:bg-gray-800 h-120 mt-5 mx-8 rounded flex flex-col items-center p-6 text-center">
+       <img alt="Bibhudutta Sahoo" class="w-100% h-50 rounded" src="./img/bidhu.jpeg"/>
+       <p class="text-xl mt-4 uppercase font-medium font-sans">
+        Bibhudutta Sahoo 
+       </p>
+       <p class="font-sans">
+        Project Student (2023)
+       </p>
+       <p class="mt-1">
+       </p>
+      </div>
+</div>
+</div>
+
+
+    </div>
+  </div>
+  
+  
+  <footer class="container mx-auto flex flex-row flex-col mt-5 mb-5 md:flex-row items-start lg:rounded-xl md:rounded w-screen" style="align-items:center;">
+   <div id="sign" class="basis-full w-screen" >
+  <span id="sign_light">
+    <img alt="Dr. Chandan Goswami" class="exclude filter invert invert-0 mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+  <span id="sign_dark">
+    <img alt="Dr. Chandan Goswami" class="exclude mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+</div>
+ 
+<div class="basis-full w-screen">
+  <span id="logo_light">
+    <img alt="NISER logo" class="h-30 exclude filter invert invert-0  mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+  <span id="logo_dark">
+    <img alt="NISER logo" class="h-30 exclude mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+</div>
+
+     <div class="basis-full pt-8 &lt;md:p-3 &lt;md:mx-auto">
+        Managed by
+        <a class="contact pl-2" href="mailto:bhatiavikash999@gmail.com" target="__blank">
+         Vikash Kumar
+      </a>
+     </div>
+    </footer>
+  
+   </main>
+  </div>
+  <script>
+   window.__INITIAL_STATE__='{"pinia":{}}'
+  </script>
+
+   <script>
+ const toggleButton = document.getElementById("toggleButton");
+const body = document.body;
+const signLight = document.getElementById("sign_light");
+const signDark = document.getElementById("sign_dark");
+const logoLight = document.getElementById("logo_light");
+const logoDark = document.getElementById("logo_dark");
+// Function to set the theme
+function setTheme(theme) {
+    if (theme === "dark") {
+        body.classList.add("dark");
+        signLight.style.display = "none";
+        signDark.style.display = "block";
+		logoLight.style.display = "none";
+        logoDark.style.display = "block";
+    } else {
+        body.classList.remove("dark");
+        signLight.style.display = "block";
+        signDark.style.display = "none";
+		logoLight.style.display = "block";
+        logoDark.style.display = "none";
+    }
+}
+
+// Toggle the theme when the button is clicked
+toggleButton.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
+// Initialize the theme based on user preference
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDarkMode) {
+    setTheme("dark");
+} else {
+    setTheme("light");
+}
+
+</script>
+
+
+
+ </body>
+</html>

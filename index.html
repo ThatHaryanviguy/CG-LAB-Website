@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="overflow-x:hidden">
+
+
+
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="./favicon.ico" rel="icon" sizes="any"/>
+  <link href=".apple-touch-icon.png" rel="apple-touch-icon"/>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        background-color: white;
+        .text-3xl{color: black;}
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    padding: 20px;
+    .text-xl {
+        color: black;
+    }
+}
+
+/* Your existing CSS styles */
+
+/* Set the navigation menu to display items in a single line */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Set a fixed width to prevent wrapping */
+  white-space: nowrap; /* Prevent wrapping to the next line */
+  overflow-x: auto; /* Add horizontal scrolling for small screens */
+}
+
+nav a {
+  margin-right: 20px; /* Adjust the spacing between menu items as needed */
+}
+
+
+
+
+
+/* Dark mode styles */
+body.dark {
+    background-color: #333;
+    color: #fff;
+    .text-xl{color: white;}
+    .text-3xl{color: green;}
+    .contact{color:white}
+    .basis-full{color: white;}
+}
+
+/* Button styles */
+.toggle-button {
+        position: fixed;
+        bottom: 20px; /* Adjust the desired distance from the bottom */
+        right: 20px; /* Adjust the desired distance from the right */
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's on top of other elements */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+
+/* Show the responsive-span on small screens (e.g., mobile devices) */
+
+/*             <a aria-current="page" class="router-link-active router-link-exact-active hover:bg-gray-200 rounded-md px-2 mt-1 xl:mr-10 transition-all duration-100 hover:text-4xl &lt;md:text-2xl" href="./index_converted.html">
+                Home
+            </a>
+
+*/
+
+
+</style>
+
+<script>
+    !function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("vueuse-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()
+  </script>
+
+  <style>
+ *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}a{color:inherit;text-decoration:inherit}body{margin:0;font-family:inherit;line-height:inherit}button{font-family:inherit;font-size:100%;line-height:1.15;margin:0;text-transform:none;background-color:transparent;background-image:none;padding:0;line-height:inherit;color:inherit}button{-webkit-appearance:button}button{cursor:pointer}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}h1,h2{font-size:inherit;font-weight:inherit}img{border-style:solid;display:block;vertical-align:middle;max-width:100%;height:auto}h1,h2,p{margin:0}:root{--prism-scheme:light;--prism-foreground:#6e6e6e;--prism-background:#f4f4f4;--prism-comment:#a8a8a8;--prism-string:#555555;--prism-literal:#333333;--prism-keyword:#000000;--prism-function:#4f4f4f;--prism-deleted:#333333;--prism-class:#333333;--prism-builtin:#757575;--prism-property:#333333;--prism-namespace:#4f4f4f;--prism-punctuation:#ababab;--prism-decorator:var(--prism-class);--prism-operator:var(--prism-punctuation);--prism-number:var(--prism-literal);--prism-boolean:var(--prism-literal);--prism-variable:var(--prism-literal);--prism-constant:var(--prism-literal);--prism-symbol:var(--prism-literal);--prism-interpolation:var(--prism-literal);--prism-selector:var(--prism-keyword);--prism-keyword-control:var(--prism-keyword);--prism-regex:var(--prism-string);--prism-json-property:var(--prism-property);--prism-inline-background:var(--prism-background);--prism-comment-style:italic;--prism-url-decoration:underline;--prism-line-number:#a5a5a5;--prism-line-number-gutter:#333333;--prism-line-highlight-background:#eeeeee;--prism-selection-background:#aaaaaa;--prism-marker-color:var(--prism-foreground);--prism-marker-opacity:.4;--prism-marker-font-size:.8em;--prism-font-size:1em;--prism-line-height:1.5em;--prism-font-family:monospace;--prism-inline-font-size:var(--prism-font-size);--prism-block-font-size:var(--prism-font-size);--prism-tab-size:2;--prism-block-padding-x:1em;--prism-block-padding-y:1em;--prism-block-margin-x:0;--prism-block-margin-y:.5em;--prism-block-radius:.3em;--prism-inline-padding-x:.3em;--prism-inline-padding-y:.1em;--prism-inline-radius:.3em}#app,body,html{height:100%;margin:0;padding:0}.icon-btn{cursor:pointer;display:inline-block;opacity:.75;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition-property:background-color,border-color,color,fill,stroke,opacity,-webkit-box-shadow,-webkit-transform,filter,backdrop-filter;-o-transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-box-shadow,transform,-webkit-transform,filter,backdrop-filter;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s;-webkit-transition-duration:.2s;-o-transition-duration:.2s;transition-duration:.2s;font-size:.9em}.icon-btn:hover{opacity:1;--tw-text-opacity:1;color:rgba(13,148,136,var(--tw-text-opacity))}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.bg-cover{background-size:cover}.rounded-md{border-radius:.375rem}.border-0{border-width:0}.flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.inline-flex{display:-webkit-inline-box;display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex}.basis-full{flex-basis:100%}.flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex-wrap{-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.items-start{-webkit-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;align-items:flex-start}.items-center{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.justify-start{-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start}.flex-initial{-webkit-box-flex:0;-ms-flex:0 1 auto;-webkit-flex:0 1 auto;flex:0 1 auto}.flex-grow{-webkit-box-flex:1;-ms-flex-positive:1;-webkit-flex-grow:1;flex-grow:1}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.font-medium{font-weight:500}.font-semibold{font-weight:600}.h-4{height:1rem}.h-screen{height:100vh}.h-30{height:7.5rem}.h-100{height:25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.hover\:text-4xl:hover,.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-2xl{font-size:1.5rem;line-height:2rem}.m-auto{margin:auto}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mt-5{margin-top:1.25rem}.mt-4{margin-top:1rem}.mt-1{margin-top:.25rem}.mb-5{margin-bottom:1.25rem}.ml-auto{margin-left:auto}.ml-1{margin-left:.25rem}.mb-3{margin-bottom:.75rem}.mt-6{margin-top:1.5rem}.mr-4{margin-right:1rem}.mt-7{margin-top:1.75rem}.mb-4{margin-bottom:1rem}.p-2{padding:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.pt-8{padding-top:2rem}.pl-2{padding-left:.5rem}.pt-3{padding-top:.75rem}.pt-40{padding-top:10rem}.pt-10{padding-top:2.5rem}.fixed{position:fixed}.top-0{top:0}.left-0{left:0}.text-left{text-align:left}.text-center{text-align:center}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity:1;color:rgba(209,213,219,var(--tw-text-opacity))}.text-blue-800{--tw-text-opacity:1;color:rgba(30,64,175,var(--tw-text-opacity))}.uppercase{text-transform:uppercase}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.w-screen{width:100vw}.w-4{width:1rem}.w-100{width:25rem}.z-0{z-index:0}.transition-all{-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s}.duration-500{-webkit-transition-duration:.5s;-o-transition-duration:.5s;transition-duration:.5s}.duration-100{-webkit-transition-duration:.1s;-o-transition-duration:.1s;transition-duration:.1s}.filter{--tw-blur:var(--tw-empty, );--tw-brightness:var(--tw-empty, );--tw-contrast:var(--tw-empty, );--tw-grayscale:var(--tw-empty, );--tw-hue-rotate:var(--tw-empty, );--tw-invert:var(--tw-empty, );--tw-saturate:var(--tw-empty, );--tw-sepia:var(--tw-empty, );--tw-drop-shadow:var(--tw-empty, );-webkit-filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.invert{--tw-invert:invert(100%)}.scroll-smooth{scroll-behavior:smooth}@media (min-width:640px){.sm\:m-0{margin:0}.sm\:mb-0{margin-bottom:0}.sm\:max-w-14\/14{max-width:100%}}@media (min-width:768px){.md\:rounded{border-radius:.25rem}.md\:rounded-lg{border-radius:.5rem}.md\:flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:mx-auto{margin-left:auto;margin-right:auto}.md\:mt-3{margin-top:.75rem}.md\:mr-auto{margin-right:auto}.md\:mt-0{margin-top:0}.md\:max-w-19\/20{max-width:95%}}@media (min-width:768px) and (max-width:1023.9px){.\@md\:mb-1{margin-bottom:.25rem}}@media (min-width:1024px){.lg\:rounded-xl{border-radius:.75rem}.lg\:h-screen{height:100vh}.lg\:text-9xl{font-size:8rem;line-height:1}.lg\:mx-auto{margin-left:auto;margin-right:auto}.lg\:mt-5{margin-top:1.25rem}.lg\:mb-1{margin-bottom:.25rem}.lg\:ml-10{margin-left:2.5rem}.lg\:max-w-13\/14{max-width:92.857143%}}@media (min-width:1280px){.xl\:mr-10{margin-right:2.5rem}.xl\:ml-10{margin-left:2.5rem}.xl\:px-40{padding-left:10rem;padding-right:10rem}}@media (max-width:767.9px){.\<md\:flex-wrap{-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.\<md\:text-2xl{font-size:1.5rem;line-height:2rem}.\<md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.\<md\:my-5{margin-top:1.25rem;margin-bottom:1.25rem}.\<md\:mx-auto{margin-left:auto;margin-right:auto}.\<md\:ml-auto{margin-left:auto}.\<md\:p-3{padding:.75rem}.\<md\:px-20{padding-left:5rem;padding-right:5rem}.\<md\:px-2{padding-left:.5rem;padding-right:.5rem}.\<md\:pr-6{padding-right:1.5rem}.\<md\:pt-3{padding-top:.75rem}.\<md\:pr-3{padding-right:.75rem}.\<md\:pl-3{padding-left:.75rem}.\<md\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.\<md\:w-screen{width:100vw}}
+  
+  </style>
+ 
+
+
+  <title>
+   C G Lab NISER - Defeating Pain
+  </title>
+  <meta content="Defeating Pain" name="description"/>
+  <meta content="Pain, NISER, research, biology, defeating pain" name="keywords"/>
+  <meta content="2" name="head:count"/>
+
+
+</head>
+ 
+
+
+
+<body >
+
+
+  <div data-server-rendered="true" id="app">
+   <main class="text-center text-gray-700 dark:text-gray-200">
+    <div class="w-screen items-center fixed">
+    <header class="lg:mt-5 md:mt-3 lg:mx-auto md:mx-auto container lg:max-w-13/14 md:max-w-19/20 sm:max-w-14/14 sm:m-0" style="background-color: white; border-radius: 10px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); padding: 10px;">
+
+
+        <div class=" mx-auto flex nowrap p-2 flex-col md:flex-row items-start lg:rounded-xl md:rounded-lg transition-all duration-500 text-gray-500 &lt;md:text-white">
+            <nav class="ml-auto md:mr-auto flex flex-initial nowrap items-start text-start uppercase font-sans text-3xl justify-center" style="display: flex; align-items: center; overflow-x: scroll; width: 100%;">
+                <a aria-current="page" class="router-link-active router-link-exact-active hover:bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./research_converted.html">
+                    Research
+                </a>
+                <a class="hover-bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl" href="./people_converted.html">
+                    People
+                </a>
+                <span class="title-font font-medium items-center ">
+                    <a class="mt-1 text-4xl hover-underline xl:px-40 md:text-3xl &lt;md:text-3xl" draggable="false" href="./index.html">
+                        CG LAB
+                    </a>
+                </span>
+                <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./publications_converted.html">
+                    Publications
+                </a>
+                <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./gallery_converted.html">
+                    Gallery
+                </a>
+            </nav>
+        </div>
+
+        
+     </header>
+     
+    </div>
+    
+
+    <button class="toggle-button" id="toggleButton">
+        <svg height="1.2em" preserveaspectratio="xMidYMid meet" viewbox="0 0 32 32" width="1.2em">
+            <path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor">
+            </path>
+            <path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor">
+            </path>
+            <path d="M2 15.005h5v2H2z" fill="currentColor">
+            </path>
+            <path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor">
+            </path>
+            <path d="M15 25.005h2v5h-2z" fill="currentColor">
+            </path>
+            <path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor">
+            </path>
+            <path d="M25 15.005h5v2h-5z" fill="currentColor">
+            </path>
+            <path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor">
+            </path>
+            <path d="M15 2.005h2v5h-2z" fill="currentColor">
+            </path>
+           </svg>
+       </button>
+
+
+
+
+
+
+    <section class="container mx-auto " id="pain">
+        <div style="display: flex; justify-content: center; align-items: center; width:100%; height: 100%;">
+            <img class="pt-7 exclude" src="./img/index_bg2.png" style="width: 200vh; height: auto;" />
+        </div>
+    </section>
+
+<!-- previous code was:  <div class="top-0 left-0 z-0 flex justify-center items-center bg-cover dark:bg-gray-700" style="background-image: url(./img/index_bg2.png); width: 90%; height: 90vh; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+</div> -->
+   
+   
+  <div> 
+   
+    <div class="container mx-auto flex " id="pain"  style="margin-top: 5%;">
+     <img class="w-100 h-100 " src="./img/Coverpic.jpg" style="padding-right:2%; width:40%; height: 40%"/>
+     <div class="flex-grow text-left lg:ml-10 &lt;md:pt-3 &lt;md:pr-3 &lt;md:pl-3">
+      <p class="text-xl" style=" text-align: justify;">
+       "Pain" is a common phenomenon which has been experienced by most of us at some point of time. It is known that different defined physical stimuli like low pH and/or noxious heat, and different noxious substances activating different receptors at the peripheral nervous system induce pain. Apart from these defined stimuli, immune system of individual and his/her psychological state can also influence the pain to a large extent. However, in most of these cases, the pain is "acute" in nature. This kind of pain is transient and is directly related to the availability of the stimuli. In other words, in absence of these noxious stimuli, the acute pain decays fast if not vanishes.
+      </p> <br>
+      <p class="text-xl" style=" text-align: justify;">
+       However, in case of "chronic pain", the pain can be long lasting and medical treatment is not satisfactory. Also many analgesic drugs, like morphine which are effective against acute pain, are not effective against chronic pain. In fact, at present chronic pain has very little scope of medical treatment if at all. The factors involved in the development of chronic pain, their effect as well as their regulation remain unclear. In a simplified manner, the chronic pain can be partially explained by the permanent changes in the signaling events within the peripheral nervous system and by an alternate neuronal connections resulting abnormal transmission of the pain signal. At the neuronal level, changes in the cellular structures like mitochondria, cytoskeleton, vesicles and others may form the basis of chronification. Transient Receptor Potential (TRP) ion channels are also known to play central role in different forms of pain. Therefore, with regard to pain chronification, the involvement of TRP ion channels and other proteins involved in the regulation of different cellular components are worth to study at the molecular level.
+      </p>
+     </div>
+    </div>
+
+</div>
+<br>
+    <div class=" container mx-auto"  style="margin-top: 5%">
+        <h2 class="text-3xl text-left mt-7 mb-4">
+            Graduate and Postdoctoral Research
+           </h2>
+           <p class="text-xl text-left" style=" text-align: justify;">
+     We are seeking highly motivated students with expertise in bioinformatics and computational biology, coupled with a basic understanding of cell biology, ion channels, and/or coding. Candidates are requested to send their CV, research experience, and details of at least two references to Prof. Goswami via email and to apply through the NISER PhD/Post-doctoral Programme. </p>
+           <h2 class="text-3xl text-left my-4">
+            Master's Student
+           </h2>
+           <p class="text-xl text-left"  style=" text-align: justify;">
+            Master's student need to apply through the
+            <a class="text-blue-800 dark:text-blue-400" style="color: green;" href="https://www.nestexam.in/" target="__blank">
+             NEST exam
+            </a>
+            before joining NISER.
+           </p>
+   </div>
+
+<br>
+
+
+<div  class="container mx-auto " id="contact-us" style="margin-top: 5%" >
+
+     <h1 class="contact" style=" font-size: 2.5rem; line-height: 2rem; ">
+
+      Contact/Join Us
+     </h1>
+     <br/>
+     <p class="contact mb-3 mt-6" style= "font-size: 1.5rem; line-height: 2rem;">
+      Prof. Chandan Goswami
+     </p>
+
+   </div>
+
+
+
+     <p class="text-3xl">
+      <a class="icon-btn" href="mailto:chandan@niser.ac.in">
+       <svg class="mr-4" height="1.2em" preserveaspectratio="xMidYMid meet" viewbox="0 0 1024 1024" width="1.2em">
+        <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5l39.3-50.5l42.8 33.3h643.1l42.8-33.3l39.3 50.5l-27.7 21.5zM833.6 232L512 482L190.4 232l-42.8-33.3l-39.3 50.5l27.6 21.5l341.6 265.6a55.99 55.99 0 0 0 68.7 0L888 270.8l27.6-21.5l-39.3-50.5l-42.7 33.2z" fill="currentColor">
+        </path>
+       </svg>
+      </a>
+
+      </a>
+      <a class="icon-btn" href="https://twitter.com/CGLab_NISER">
+       <svg class="mr-4" height="1.2em" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24" width="1.2em">
+        <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003Z" fill="currentColor">
+        </path>
+       </svg>
+      </a>
+     </p>
+
+
+
+    <!--]-->
+<footer class="container mx-auto flex flex-row flex-col mt-5 mb-5 md:flex-row items-start lg:rounded-xl md:rounded w-screen">
+   <div id="sign" class="basis-full w-screen" >
+  <span id="sign_light">
+    <img alt="Dr. Chandan Goswami" class="filter invert invert-0 mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+  <span id="sign_dark">
+    <img alt="Dr. Chandan Goswami" class=" mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+</div>
+	 
+     
+	 
+	 
+<div class="basis-full w-screen">
+  <span id="logo_light">
+    <img alt="NISER logo" class="h-30  filter invert invert-0  mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+  <span id="logo_dark">
+    <img alt="NISER logo" class="h-30 mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+</div>
+
+     <div class="basis-full pt-8 &lt;md:p-3 &lt;md:mx-auto">
+        Managed by
+        <a class="contact pl-2" href="mailto:bhatiavikash999@gmail.com" target="__blank">
+         Vikash Kumar
+      </a>
+     </div>
+    </footer>
+
+   </main>
+  </div>
+  <script>
+   window.__INITIAL_STATE__='{"pinia":{"user":{"savedName":""}}}'
+  </script>
+
+       <script>
+ const toggleButton = document.getElementById("toggleButton");
+const body = document.body;
+const signLight = document.getElementById("sign_light");
+const signDark = document.getElementById("sign_dark");
+const logoLight = document.getElementById("logo_light");
+const logoDark = document.getElementById("logo_dark");
+// Function to set the theme
+function setTheme(theme) {
+    if (theme === "dark") {
+        body.classList.add("dark");
+        signLight.style.display = "none";
+        signDark.style.display = "block";
+		logoLight.style.display = "none";
+        logoDark.style.display = "block";
+    } else {
+        body.classList.remove("dark");
+        signLight.style.display = "block";
+        signDark.style.display = "none";
+		logoLight.style.display = "block";
+        logoDark.style.display = "none";
+    }
+}
+
+// Toggle the theme when the button is clicked
+toggleButton.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
+// Initialize the theme based on user preference
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDarkMode) {
+    setTheme("dark");
+} else {
+    setTheme("light");
+}
+
+</script>
+
+ </body>
+</html>

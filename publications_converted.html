@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="overflow-x:hidden">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="./favicon.ico" rel="icon" sizes="any"/>
+  <link href="./apple-touch-icon.png" rel="apple-touch-icon"/>
+
+  <link rel="stylesheet" type="text/css" href="./dark-mode/dark_mode_pub.css">
+
+ <!-- css -->
+
+  <style>
+      li a:hover {
+    text-decoration: underline;
+  }
+
+  body {background-color: white;
+        .text-3xl{color: black;}
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    padding: 20px;
+    .text-xl {
+        color: black;
+    }
+}
+.pt-8 {text-align: justify;}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Set a fixed width to prevent wrapping */
+  white-space: nowrap; /* Prevent wrapping to the next line */
+  overflow-x: auto; /* Add horizontal scrolling for small screens */
+}
+
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .marquee-content {
+      display: flex;
+      transition: transform 1s ease-in-out; /* Added transition property */
+    }
+    .toggle-button {
+        position: fixed;
+        bottom: 20px; /* Adjust the desired distance from the bottom */
+        right: 20px; /* Adjust the desired distance from the right */
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's on top of other elements */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+/* Dark mode styles */
+body.dark {
+    background-color: #333;
+    color: #fff;
+    .text-xl{color: white;}
+    .text-3xl{color: green;}
+	.text-4xl{color:green;}
+    .contact{color:white}
+    .basis-full{color: white;}
+}
+
+
+/* CSS to style anchor tags as plain text. Remove these while adding links*/
+li a {
+  pointer-events: none; /* Disables click events */
+  color: inherit; /* Retains the text color */
+  text-decoration: none; /* Removes underline */
+  cursor: default; /* Changes cursor to default */
+}
+
+
+
+  </style>
+  
+
+  <!-- script for adding swipe in a class -->
+
+<script>
+    
+
+    function startCarousel() {
+  const marqueeContent = document.querySelector('.marquee-content');
+  const marqueeWidth = document.querySelector('.marquee').clientWidth;
+  const contentWidth = marqueeContent.offsetWidth;
+
+  const images = marqueeContent.querySelectorAll('img');
+  let currentIndex = 0;
+
+  function slide() {
+    marqueeContent.style.transition = 'transform 1s ease-in-out';
+    marqueeContent.style.transform = `translateX(-${currentIndex * marqueeWidth}px)`;
+
+    currentIndex++;
+    if (currentIndex >= images.length) {
+      currentIndex = 0;
+    }
+  }
+
+  setInterval(slide, 3000); // Adjust slide duration as needed
+}
+
+window.onload = startCarousel;
+
+
+
+
+  </script>
+  
+
+
+
+
+
+
+
+
+  <script>
+   !function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("vueuse-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()
+  </script>
+ 
+ 
+  <style>
+   *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}a{color:inherit;text-decoration:inherit}body{margin:0;font-family:inherit;line-height:inherit}button{font-family:inherit;font-size:100%;line-height:1.15;margin:0;text-transform:none;background-color:transparent;background-image:none;padding:0;line-height:inherit;color:inherit}button{-webkit-appearance:button}button{cursor:pointer}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}h1,h2{font-size:inherit;font-weight:inherit}img{border-style:solid;display:block;vertical-align:middle;max-width:100%;height:auto}h1,h2{margin:0}ul{list-style:none;margin:0;padding:0}:root{--prism-scheme:light;--prism-foreground:#6e6e6e;--prism-background:#f4f4f4;--prism-comment:#a8a8a8;--prism-string:#555555;--prism-literal:#333333;--prism-keyword:#000000;--prism-function:#4f4f4f;--prism-deleted:#333333;--prism-class:#333333;--prism-builtin:#757575;--prism-property:#333333;--prism-namespace:#4f4f4f;--prism-punctuation:#ababab;--prism-decorator:var(--prism-class);--prism-operator:var(--prism-punctuation);--prism-number:var(--prism-literal);--prism-boolean:var(--prism-literal);--prism-variable:var(--prism-literal);--prism-constant:var(--prism-literal);--prism-symbol:var(--prism-literal);--prism-interpolation:var(--prism-literal);--prism-selector:var(--prism-keyword);--prism-keyword-control:var(--prism-keyword);--prism-regex:var(--prism-string);--prism-json-property:var(--prism-property);--prism-inline-background:var(--prism-background);--prism-comment-style:italic;--prism-url-decoration:underline;--prism-line-number:#a5a5a5;--prism-line-number-gutter:#333333;--prism-line-highlight-background:#eeeeee;--prism-selection-background:#aaaaaa;--prism-marker-color:var(--prism-foreground);--prism-marker-opacity:.4;--prism-marker-font-size:.8em;--prism-font-size:1em;--prism-line-height:1.5em;--prism-font-family:monospace;--prism-inline-font-size:var(--prism-font-size);--prism-block-font-size:var(--prism-font-size);--prism-tab-size:2;--prism-block-padding-x:1em;--prism-block-padding-y:1em;--prism-block-margin-x:0;--prism-block-margin-y:.5em;--prism-block-radius:.3em;--prism-inline-padding-x:.3em;--prism-inline-padding-y:.1em;--prism-inline-radius:.3em}#app,body,html{height:100%;margin:0;padding:0}.icon-btn{cursor:pointer;display:inline-block;opacity:.75;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition-property:background-color,border-color,color,fill,stroke,opacity,-webkit-box-shadow,-webkit-transform,filter,backdrop-filter;-o-transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-box-shadow,transform,-webkit-transform,filter,backdrop-filter;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s;-webkit-transition-duration:.2s;-o-transition-duration:.2s;transition-duration:.2s;font-size:.9em}.icon-btn:hover{opacity:1;--tw-text-opacity:1;color:rgba(13,148,136,var(--tw-text-opacity))}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.rounded-md{border-radius:.375rem}.border-0{border-width:0}.flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.inline-flex{display:-webkit-inline-box;display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex}.basis-full{flex-basis:100%}.flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex-wrap{-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.items-start{-webkit-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;align-items:flex-start}.items-center{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.justify-start{-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start}.flex-initial{-webkit-box-flex:0;-ms-flex:0 1 auto;-webkit-flex:0 1 auto;flex:0 1 auto}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.font-medium{font-weight:500}.h-4{height:1rem}.h-30{height:7.5rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.hover\:text-4xl:hover,.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-2xl{font-size:1.5rem;line-height:2rem}.list-disc{list-style-type:disc}.mx-auto{margin-left:auto;margin-right:auto}.mt-5{margin-top:1.25rem}.mt-4{margin-top:1rem}.mt-1{margin-top:.25rem}.mb-5{margin-bottom:1.25rem}.ml-auto{margin-left:auto}.ml-1{margin-left:.25rem}.p-2{padding:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.pt-8{padding-top:2rem}.pl-2{padding-left:.5rem}.pt-7{padding-top:1.75rem}.pb-150px{padding-bottom:150px}.pl-3{padding-left:.75rem}.pl-5{padding-left:1.25rem}.fixed{position:fixed}.text-left{text-align:left}.text-center{text-align:center}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.uppercase{text-transform:uppercase}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.w-screen{width:100vw}.w-4{width:1rem}.transition-all{-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s}.duration-500{-webkit-transition-duration:.5s;-o-transition-duration:.5s;transition-duration:.5s}.duration-100{-webkit-transition-duration:.1s;-o-transition-duration:.1s;transition-duration:.1s}.filter{--tw-blur:var(--tw-empty, );--tw-brightness:var(--tw-empty, );--tw-contrast:var(--tw-empty, );--tw-grayscale:var(--tw-empty, );--tw-hue-rotate:var(--tw-empty, );--tw-invert:var(--tw-empty, );--tw-saturate:var(--tw-empty, );--tw-sepia:var(--tw-empty, );--tw-drop-shadow:var(--tw-empty, );-webkit-filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.invert{--tw-invert:invert(100%)}.scroll-smooth{scroll-behavior:smooth}@media (min-width:640px){.sm\:m-0{margin:0}.sm\:mb-0{margin-bottom:0}.sm\:max-w-14\/14{max-width:100%}}@media (min-width:768px){.md\:rounded{border-radius:.25rem}.md\:rounded-lg{border-radius:.5rem}.md\:flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:mx-auto{margin-left:auto;margin-right:auto}.md\:mt-3{margin-top:.75rem}.md\:mr-auto{margin-right:auto}.md\:mt-0{margin-top:0}.md\:max-w-19\/20{max-width:95%}.md\:pb-70px{padding-bottom:70px}}@media (min-width:768px) and (max-width:1023.9px){.\@md\:mb-1{margin-bottom:.25rem}}@media (min-width:1024px){.lg\:rounded-xl{border-radius:.75rem}.lg\:mx-auto{margin-left:auto;margin-right:auto}.lg\:mt-5{margin-top:1.25rem}.lg\:mb-1{margin-bottom:.25rem}.lg\:max-w-13\/14{max-width:92.857143%}.lg\:pb-70px{padding-bottom:70px}}@media (min-width:1280px){.xl\:mr-10{margin-right:2.5rem}.xl\:ml-10{margin-left:2.5rem}.xl\:px-40{padding-left:10rem;padding-right:10rem}}@media (max-width:767.9px){.\<md\:text-2xl{font-size:1.5rem;line-height:2rem}.\<md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.\<md\:my-5{margin-top:1.25rem;margin-bottom:1.25rem}.\<md\:mx-auto{margin-left:auto;margin-right:auto}.\<md\:ml-auto{margin-left:auto}.\<md\:ml-3{margin-left:.75rem}.\<md\:p-3{padding:.75rem}.\<md\:px-20{padding-left:5rem;padding-right:5rem}.\<md\:pr-6{padding-right:1.5rem}.\<md\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.\<md\:w-screen{width:100vw}}.marquee{overflow:hidden;position:relative}.marquee-content{display:flex;white-space:nowrap}
+  </style>
+
+
+  <title>
+   C G Lab NISER - Defeating Pain
+  </title>
+  <meta content="Defeating Pain" name="description"/>
+  <meta content="Pain, NISER, research, biology, defeating pain" name="keywords"/>
+  <meta content="2" name="head:count"/>
+ </head>
+ <body>
+  <div data-server-rendered="true" id="app">
+   <main class="text-center text-gray-700 dark:text-gray-200">
+    <div class="w-screen items-center fixed">
+      <header class="lg:mt-5 md:mt-3 lg:mx-auto md:mx-auto container lg:max-w-13/14 md:max-w-19/20 sm:max-w-14/14 sm:m-0" style="background-color: white; border-radius: 10px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); padding: 10px;">
+
+        <div class=" mx-auto flex nowrap p-2 flex-col md:flex-row items-start lg:rounded-xl md:rounded-lg transition-all duration-500 text-gray-500 &lt;md:text-white">
+          <nav class="ml-auto md:mr-auto flex flex-initial nowrap items-start text-start uppercase font-sans text-3xl justify-center" style="display: flex; align-items: center; overflow-x: scroll; width: 100%;">
+              <a aria-current="page" class="router-link-active router-link-exact-active hover:bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./research_converted.html">
+                  Research
+              </a>
+              <a class="hover-bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl" href="./people_converted.html">
+                  People
+              </a>
+              <span class="title-font font-medium items-center ">
+                  <a class="mt-1 text-4xl hover-underline xl:px-40 md:text-3xl &lt;md:text-3xl" draggable="false" href="./index.html">
+                      CG LAB
+                  </a>
+              </span>
+              <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./publications_converted.html">
+                  Publications
+              </a>
+              <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./gallery_converted.html">
+                  Gallery
+              </a>
+          </nav>
+      
+
+       <span class="border-0 py-1 px-3 mt-4 md:mt-0 inline-flex items-center w-4 h-4 ml-1">
+       </span>
+
+
+       <button class="toggle-button" id="toggleButton">
+        <svg height="1.2em" preserveaspectratio="xMidYMid meet" viewbox="0 0 32 32" width="1.2em">
+            <path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor">
+            </path>
+            <path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor">
+            </path>
+            <path d="M2 15.005h5v2H2z" fill="currentColor">
+            </path>
+            <path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor">
+            </path>
+            <path d="M15 25.005h2v5h-2z" fill="currentColor">
+            </path>
+            <path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor">
+            </path>
+            <path d="M25 15.005h5v2h-5z" fill="currentColor">
+            </path>
+            <path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor">
+            </path>
+            <path d="M15 2.005h2v5h-2z" fill="currentColor">
+            </path>
+           </svg>
+       </button>
+
+
+      </div>
+     </header>
+    </div>
+    <div class="pb-150px md:pb-70px lg:pb-70px">
+    </div>
+    <!--[-->
+
+
+
+    <div class="marquee">
+     <div class=" marquee-content pt-7" style="transform:translateX(0);">
+
+      <img src="./img/cover_pages.png" >
+	  
+      <img src="./img/Lab journals logos_updated.png"">
+           
+     </div>
+
+     </div>
+    
+
+
+    <div class="container mx-auto text-left">
+     <h1 class="text-4xl pt-7 pl-3 uppercase font-sans">
+      
+      Publications
+      <a href="https://scholar.google.com/citations?user=_w0ohLQAAAAJ&hl=en&oi=ao" style= "color: blue; font-size: small;"> 
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+          <path fill="#1e88e5" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"></path><path fill="#1565c0" d="M35,16.592v-3.878L37,11H27l0.917,1.833c-1.236,0-2.265,0-2.265,0S19.095,13,19.095,18.748	c0,5.752,5.732,5.088,5.732,5.088s0,0.865,0,1.453c0,0.594,0.77,0.391,0.864,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.722,0.365,7.722-6.104c0-3.871-4.405-5.121-4.405-6.686c0-1.563,3.319-2.012,3.319-5.684	c0-0.823-0.028-1.524-0.149-2.12L34,13.571v3.02c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5V18	C36,17.348,35.581,16.799,35,16.592z M30.047,31.169c0.131,2.024-1.929,3.811-4.603,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.6-3.996C27.641,27.667,29.914,29.152,30.047,31.169z M26.109,22.453	c-1.592,0.451-3.375-1.062-3.982-3.367c-0.604-2.312,0.195-4.543,1.786-4.992c1.593-0.453,3.374,1.059,3.981,3.367	C28.499,19.77,27.702,22.004,26.109,22.453z"></path><path fill="#e8eaf6" d="M34,16.592V12c0-0.051-0.015-0.097-0.029-0.143L35,11H21l-9,8h5.383	c0.174,5.466,5.715,4.836,5.715,4.836s0,0.865,0,1.453c0,0.594,0.771,0.391,0.865,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.721,0.365,7.721-6.104c0-3.871-4.404-5.121-4.404-6.686c0-1.563,3.318-2.012,3.318-5.684	c0-0.971-0.047-1.763-0.232-2.422L33,12.667v3.925c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5	V18C35,17.348,34.581,16.799,34,16.592z M28.319,31.169c0.131,2.024-1.928,3.811-4.602,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.599-3.996C25.914,27.667,28.187,29.152,28.319,31.169z M24.38,22.453	c-1.591,0.451-3.373-1.062-3.981-3.367c-0.604-2.312,0.194-4.543,1.785-4.992c1.593-0.453,3.374,1.059,3.982,3.367	C26.77,19.77,25.973,22.004,24.38,22.453z"></path>
+          </svg>
+      </a>
+     
+     </h1>
+
+
+    <ul id="publications-list" class="list-disc pl-5 font-sans text-xl &lt;md:ml-3">
+
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2023
+      </h2>
+
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Dubey NK, Das NK, Mahapatra P, Mohanta S, Shikha D, Banerjee A, Sahu RP, Acharya TK, Mishra S, Kumar S, Rokade TP, Kumar V, Halder RR, Sing R, Aswin T, Kumar S, Goswami L, Kumar S, Goswami C. (2023) Current understanding of TRP channels and their genomics: Implication in health research, Book chapter (Accepted)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Shikha D, Mahish C, Sing R, Chattopadhyay S, Goswami C (2023) Modulation of TRPM8 alters the phagocytic activity of microglia and induces changes in sub-cellular organelle functions. Biochem Biophys Res Commun. (Accepted)
+        </a>
+      </li>
+
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar S, Acharya TK, Halder RR, Chang YT, Mahapatra P, Goswami C. (2023) Menthol causes mitochondrial Ca2+-influx, affects structure-function relationship and cools mitochondria. Life Sciences.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Panda SK, Sahu RP, Goswami C., Singh AK. (2023) Easily synthesizable molecular probe for the nanomolar level detection of Cd2+ in near aqueous media: Theoretical investigations and live cell imaging. Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy. (Accepted)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Radhakrishnan A; Mukherjee T; Mahish C; Kumar PS; Goswami C. Chattopadhyay S (2023) TRPA1 activation and Hsp90 inhibition synergistically downregulate macrophage activation and inflammatory responses in vitro. BMC Immunology (Accepted)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Acharya TK, Pal S, Ghosh A, Kumar S, Kumar S, Chattopadhyay N, Goswami C (2023) TRPV4 regulates osteoblast differentiation and mitochondrial function that are relevant for channelopathy. Frontiers in Cell and Developmental Biology (Accepted)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+        Dubey, N. K., Mishra, S., & Goswami C. (2023). Progesterone interacts with the mutational hot-spot of TRPV4 and acts as a ligand relevant for fast Ca2+-signalling. Biochimica et Biophysica Acta (BBA)-Biomembranes, 1865(6), 184178.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Mohapatra A, Kumar S, Acharya K, Goswami C, Bhaumik S. (2023) Highly stable multi-encapsulated red-emitting cesium lead halide nanocrystals for efficient copper ion detection and imaging in live cells. Journal of Alloys and Compounds. 947, 169453
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kar R, Kumar S; Acharya TK; Goswami C. , Bhaumik S (2023) Highly water-stable and monodisperse double polymer-coated CsPbBr3 nanocrystals for bioimaging application in living cells with better sensitivity. RSC Advances. 13, 5946-5956.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Acharya TK, Kumar S, Rokade TP, Chang YT, Goswami C. (2023) TRPV4 regulates mitochondrial Ca2+-status and physiology in primary murine T cells based on their immunological state. Life Sciences. 318, 121493.
+        </a>
+
+      </li>
+      
+ 
+      
+
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2022
+      </h2>
+      <li class="pt-8">
+  <a href="insert link" target="__blank">
+    Das R, Mohanta S, Dubey NK, Dash N, Goswami C (2023) Human skeletal dysplasia causing L596P-mutant alters the conserved amino acid pattern at the Lipid-Water-Interface of TRPV4. BBA Biomembrane 1865(2): 184085.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Sahu RP, Goswami C (2023) Presence of TRPV3 in macrophage lysosomes helps in skin wound healing against bacterial infection. Journal of Experimental Dermatology. 32(1):60-74.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Acharya TK, Kumar A, Kumar S, Goswami C (2022) TRPV4 interacts with MFN2 and facilitates endoplasmic reticulum-mitochondrial contact points for Ca2+-buffering. Life sciences 310: 121112.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Acharya TK, Kumar A, Majhi RK, Kumar S, Chakraborty R, Tiwari A, Smalla KH, Liu X, Chang YT, Gundelfinger ED, Goswami C (2022) TRPV4 acts as a mitochondrial Ca2+-importer and regulates mitochondrial temperature and metabolism. Mitochondrion. 67: 38-58.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Swain N, Samanta L, Goswami C, Kar S, Majhi RK, Kumar S, Dixit A. (2022) TRPV1 channel in spermatozoa is a molecular target for ROS mediated sperm dysfunction and differentially expressed in both natural and ART pregnancy failure. Frontiers in Cell and Developmental Biology. 10: 867057.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Jain A, Sahu R P, Goswami C. (2022) Olmsted syndrome causing point mutants of TRPV3 (G568C and G568D) show defects in intracellular Ca2+ mobilization and induce lysosomal defects. Biochem Biophys Res Commun. 628: 32-39.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Das R & Goswami C. (2022) Role of TRPV4 in skeletal function and its mutant-mediated skeletal disorders. (Book chapter) TRPV4 Channels in Different Organ Systems. Volume 89, Curr Top Membr. 89: 221-246. doi: 10.1016/bs.ctm.2022.07.004.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Acharya TK, Sahu RP, Kumar S, Kumar S, Rokade TP, Chakraborty R, Dubey NK, Shikha D, Chawla S, Goswami C (2022) Function and regulation of thermosensitive ion channel TRPV4 in the immune system. (Book chapter) TRPV4 Channels in Different Organ Systems. Volume 89, Curr Top Membr. 89: 155-188.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Singh A, Kumar S, Acharya TK, Goswami C and Goswami L. (2022) Application of nanohydroxyapatite-polysaccharide based biomaterial for bone cell mineralization in tissue engineering. Materials Today Communications. (Accepted).
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Saha S, Mohanta S, Das R, Dalai R, Divyanshi, Tiwari N, Tiwari A, Kumar A, Goswami C. (2022) Ratio of Hydrophobic-Hydrophilic and Positive-Negative Residues at Lipid-Water-Interface Influences Surface Expression and Channel Gating of TRPV1. J Membr Biol. 255(2-3): 319-339.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Das R, Kumar A, Dalai R, Goswami C. (2022) Cytochrome C interacts with the pathogenic mutational hotspot region of TRPV4 and forms complexes that differ in mutation and metal ion-sensitive manner. Biochem Biophys Res Commun. 611: 172-178.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Chakraborty R; Goswami C (2022) Both heat-sensitive TRPV4 and cold-sensitive TRPM8 ion channels regulate microglial activity. Biochem Biophys Res Commun 611: 132-139.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Chakraborty R, Acharya TK, Tiwari N, Majhi RK, Kumar S, Goswami L, Goswami C (2022) Hydrogel mediated release of TRPV1 modulators to fine-tune Osteoclastogenesis. ACS Omega 7, 9537-9550.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Kar MR, Chakraborty R, Patel U, Chakraborty R, Ray S, Acharya TK, Goswami C, Bhaumik S (2022) Impact of Zn-doping on the composition, stability, luminescence properties of silica coated all-inorganic cesium lead bromide nanocrystals and their biocompatibility. Materials Today Chemistry. 23, 100753.
+  </a>
+</li>
+
+<li class="pt-8">
+  <a href="insert link" target="__blank">
+    Mahanta S; Prusty M; Sivakumar PS; Mishra D; Sahu R; Goswami C; Chawla S; Goswami L; Elangovan S, Panda SK (2022) Novel Levilactobacillus brevis-based formulation for controlling cell proliferation, cell migration and gut dysbiosis. LWT - Food Science & Technology. 154, 112818.
+  </a>
+</li>
+
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2021
+      </h2>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Sengupta S, Singh A, Dutta K Sahu RP, Goswami C, Chawla S, Goswami L, Bandyopadhyay A (2021) Branched/Hyperbranched Copolyesters from Poly (vinyl alcohol) And Citric Acid as Delivery Agent and a Tissue Regeneration Scaffold. Macromolecular Chemistry and Physics. 222, 2100134.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Majhi R, Majhi RK, Garhnayak L, Patro TK, Dhal A, Kumar S, Guha P, Goswami L, Goswami C (2020) Comparative evaluation of surface modified zirconia for growth of bone cells and early osseointegration. The Journal of Prosthetic Dentistry. 126, 92. e1-92. e8.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Das M, Maity D, Acharya TK, Sau S, Giri C, Goswami C and Mal P. (2021) Lowest Aqueous Picomolar Fluoride Ion Detection by an Aluminum(III) Bind Chemosensor and in vivo Aluminum-Toxicity. Dalton Transactions. 50(8): 3027-3036.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Acharya TK, Tiwari N, Kumar S, Ghosh A, Tiwari A, Pal S, Majhi RK, Kumar A, Das R, Singh A, Maji PK, Chattopadhyay N, Goswami L, Goswami C. (2021) TRPM8 channel inhibitor-encapsulated CMT:HEMA hydrogel as a tunable surface for bone tissue engineering. Scientific reports. 11(1): 3730.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Choudhury P, Chawla S, Agarwal S, Singh A, Nayak A, Kumar A, Maji PK, Goswami C, Goswami L. (2020) Modified tamarind kernel polysaccharide-based matrix alters neuro-keratinocyte cross-talk and serves as a suitable scaffold for skin tissue engineering. Materials Science & Engineering C. 121: 111779.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Yadav C, Chajjed M, Chaudhary P, Sahu RP, Patel A, Chawla S, Goswami L, Goswami C and Maji PK. (2021) Bio-extract amalgamated sodium alginate-cellulose nanofibres based 3D- sponges with interpenetrating bioPU coating as wound care scaffolds. Materials Science & Engineering C. 118:111348.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar PS, Nayak TK, Mahish C, Sahoo SS, Anukrishna R, De S, Datey A, Sahu RP, Goswami C, Chattopadhyay S, Chattopadhyay S. (2021) Inhibition of Transient Receptor Potential Vanilloid 1 (TRPV1) Channel Regulates Chikungunya Virus Infection in Macrophages. Archived in virology. 166(1): 139-155.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Acharya TK, Tiwari A, Majhi RK, Goswami C. (2021) Endogenous TRPM8 channel augments T cell activation and proliferation. Cell biology international. 45(1): 198-210.
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2020
+      </h2>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Mohanta S and Goswami C (2020) TRP channels at gut: effect of probiotics and phyto-nutraceuticals on gut-brain-immune axis. Book Chapter. Springer.
+        </a>
+      </li>
+      
+  
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Majhi RK, Kumar A, Giri SC, Goswami C. (2020) Differential expression and localization of TRPV channels in the mature sperm of Anas platyrhynchos. Reproduction in domestic animals. 55: 1619-1628.
+        </a>
+      </li>
+    <li class="pt-8 skip-publication">
+        <a href="https://www.biorxiv.org/content/10.1101/2020.02.10.941732v1" target="__blank">
+         67a Majhi R K, Kumar A, Giri SC, Goswami C. (2020) Differential expression and localization of thermosensitive Transient Receptor Potential Vanilloid (TRPV) channels in the mature sperm of white pekin duck (Anas platyrhynchos). bioRxiv: (Preprint)
+      https://www.biorxiv.org/content/10.1101/2020.02.10.941732v1   </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Chattopadhyay NR, Chatterjee K, Tiwari N, Chakrabarti S, Sahu SK, Roy SD, Ghosh A, Reddy RR, Das P, Mal S, Karnar BB, Das AK, Tsering S, Riba K, Puii Z, Zomawia E, Singh YI, Suryawanshi AR, Kumar A, Ganguly D, Goswami C, Choudhuri T. (2020) TLR9 polymorphisms might contribute to the ethnicity bias for EBV-infected Nasopharyngeal Carcinoma. iScience 23: 100937.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Yadav M, Goswami C (2020) TRPV2 interacts with actin and reorganizes submembranous actin cytoskeleton. Bioscience Reports. 40(10): BSR20200118.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Parveen A, Kumar R, Tandon R, Khurana S, Goswami C, Kumar A. (2020) Mutational hotspots of HSP47 and its potential role in cancer and bone-disorders. Genomics 112: 552-566.
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2019
+      </h2>
+
+      <li class="pt-8">
+        <a href="https://doi.org/10.1101/817684" target="__blank">
+          Yadav M, Goswami C (2019) TRPV2 activation reorganizes actin cytoskeleton, induces neurite initiation and branching by altering cAMP levels. bioRxiv
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar S, Majhi RK, Singh A, Mishra M, Chawla S, Tiwari A, Guha P, Satpati B, Mohapatra H, Goswami L, Goswami C (2019) Carbohydrate-coated Gold-Silver nanoparticles for efficient elimination of multi drug resistant bacteria and in vivo wound healing. ACS-Applied materials and interfaces 11(46), 42998-43017
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Das R, Goswami C (2019) TRPV4 expresses in bone cell lineages and TRPV4-R616Q mutant causing Brachyolmia in human reveals “loss-of-interaction” with cholesterol. Biochemical and Biophysical Research Communications 517: 566-574.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Saha S, Sucharita S, Majhi RK, Tiwari A, Ghosh A, Pradhan SK, Patra BK, Dash RR, Nayak RN, Giri SC, Routray P, Kumar A, Kumar GP, Goswami C (2019) TRPA1 is selected as a semi-conserved channel during vertebrate evolution due to its involvement in spermatogenesis. Biochemical and Biophysical Research Communications 512: 295-302.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Yadav M, Saha S, Kumar A, Goswami C (2019) Plant and natural products as modulators of TRP channels. Biological Research & Reviews., 1–13
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Behera S., Mishra P.C., Ghosh S., Goswami C. Mallick B. (2019) Microscopic Observation of Acid Rain Induced Bacopa monnieri L. Microscopy Research, 7, 11-25.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          * Sahoo SS, Majhi RK, Tiwari A, Acharya TK, Kumar PS, Saha S, Goswami C, Chattopadhyay S (2019) Transient Receptor Potential Ankyrin1 channel is endogenously expressed in T cells and regulates immune functions. Bioscience Reports; 39(9). pii: BSR20191437. (* = Cover page)
+        </a>
+      </li>
+      
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2018
+      </h2>
+      
+      <li class="pt-8 skip-publication">
+        <a href="http://biorxiv.org/cgi/content/short/621854v1" target="__blank">
+          57a Sahoo SS, Majhi RK, Tiwari A, Acharya TK, Kumar PS, Saha S, Goswami C, Chattopadhyay S (2018) Transient Receptor Potential Ankyrin1 channel is endogenously expressed in T cells and regulates immune functions. bioRxiv (Preprint)
+        </a>
+      </li>
+      
+      <li class="pt-8 skip-publication">
+        <a href="insert link" target="__blank">
+       Parveen, A.; Kumar, R.; Tandon, R.; Khurana, S.; Goswami, C.; Kumar, A. Mutational Hotspots and Protein Interactome Analyses of Collagen-Specific Chaperone-HSP47. Preprints 2018, 2018110280. https://doi.org/10.20944/preprints201811.0280.v1 </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+?. A Kumar, RK Majhi, TK Acharya, KH Smalla, ED Gundelfinger, Goswami C. (2018) TRPV4 interacts with mitochondrial proteins and acts as a mitochondrial structure-function regulator, BioRxiv, 330993 (? =Appeared in Charcot-Marie-Tooth News: https://charcot-marie-toothnews.com/2018/06/08/trpv4-channels-linked-to-cmt2c-regulate-structure-and-function-of-mitochondria-study-reports/)   
+      </a>
+      </li>
+      
+      <li class="pt-8 skip-publication">
+        <a href="insert link" target="__blank">
+        Majhi RK, Maity A, Senapati MR, Behera PC, Mandal AK, Giri SC, Goswami C-. 2018. Endogenous expression of thermo-sensitive ion channels TRPV1 and TRPV4 in immune tissues of avian species (duck, Anas platyrhynchos) PeerJ Preprints 6:e26614v1 https://doi.org/10.7287/peerj.preprints.26614v1
+	</a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar S, Singh U, Singh O, Goswami C, Singru PS (2018) Transient receptor potential vanilloid 1-6 (TRPV1-6) gene expression in the mouse brain during the estrous cycle. Brain Research, 1701: 161-170.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Mishra M, Kumar S, Majhi R K, Goswami L, Goswami C, Mohapatra H (2018). Antibacterial efficacy of polysaccharide-capped silver nanoparticles is not affected by AcrAB-TolC efflux pump. Frontiers in Microbiology. 9, 823.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Choudhury P, Kumar S, Singh A, Kumar A, Kaur N, Sanyasi S, Chawla S, Goswami C, Goswami L (2018) Hydroxyethyl methacrylate grafted carboxy methyl tamarind (CMT-g-HEMA) polysaccharide-based matrix as a suitable scaffold for skin tissue engineering. Carbohydrate Polymers. 189, 87-98.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar S, Majhi RK, Sanyasi S, Goswami C, Goswami L (2018) Acrylic acid grafted tamarind kernel polysaccharide-based hydrogel for bone tissue engineering in the absence of any osteoinducing factors. Connective Tissue Research 59, 111-121.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Schoville SD, Chen YH, Andersson MN, Benoit JB, Bhandari A, Bowsher JH, Brevik K, Cappelle K, Chen MJM, Childers AK, Childers C, Christiaens O, Clements J, Didion EM, Elpidina EN, Engsontia P, Friedrich M, García-Robles I, Gibbs RA, Goswami C, Grapputo A, Gruden K, Grynberg M, Henrissat B, Jennings EC, Jones JW, Kalsi M, Khan SA, Kumar A, Li F, Lombard V, Ma X, Martynov A, Miller NJ, Mitchell RF, Munoz-Torres M, Muszewska A, Oppert B, Palli SR, Panfilio KA, Pauchet Y, Perkin LC, Petek M, Poelchau MF, Record E, Rinehart JP, Robertson HM, Rosendale AJ, Ruiz-Arroyo VM, Smagghe G, Szendrei Z, Thomas GWC, Torson AS, Jentzsch IMV, Weirauch MT, Yates AD, Yocum GD, Yoon JS, Richards S (2018) A model species for agricultural pest genomics: the genome of the Colorado potato beetle, Leptinotarsa decemlineata (Coleoptera: Chrysomelidae). Scientific Reports 8, 1931.
+        </a>
+      </li>
+
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2017
+      </h2>
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Saha S, Ghosh A, Tiwari N, Kumar A, Kumar A, Goswami C (2017) Preferential selection of Arginine at the lipid-water-interface of TRPV1 during vertebrate evolution correlates with its snorkeling behavior and cholesterol interaction. Scientific reports 7, 16808.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Bhandari A; Sarde SJ, Goswami C (2017) Ancestry & molecular evolutionary analyses of heat-shock protein 47 kDa (HSP47/SERPINH1) Scientific reports 7, 10394.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar S, Singh U, Goswami C, Singru PS (2017) Transient receptor potential vanilloid 5 (TRPV5), a highly Ca2+-selective TRP channel in the rat brain: relevance to neuroendocrine regulation. Journal of Neuroendocrinology 29, 4.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar S, Singh U, Singh O, Goswami C, Singru PS (2017) Transient receptor potential vanilloid 6 (TRPV6) in the mouse brain: Distribution and estrous cycle-related changes in the hypothalamus. Neuroscience 344, 204-216.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Yadav M, Goswami C (2017) TRPV3 mutants causing Olmsted Syndrome induce impaired cell adhesion and nonfunctional lysosomes. Channels 11, 196-208. (* = Cover page)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Sanyasi S, Kumar S, Ghosh A, Majhi RK, Kaur N, Choudhury P, Singh UP, Goswami C, Goswami L. (2017) A modified polysaccharide-based hydrogel for enhanced osteogenic maturation and mineralization independent of differentiation factors. Macromolecular Bioscience 17, 3. (* = Cover page)
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2016
+      </h2>
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Ghosh A, Kaur N, Kumar A, Goswami C (2016) Why individual thermo sensation and pain perception varies? Clue of disruptive mutations in TRPVs from 2504 human genome data. Channels 10, 339-345.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Singh U, Kumar S, Shelkar G, Yadav M, Kokare D, Goswami C, Lechan R, Singru P (2016) Transient receptor potential vanilloid (TRPV3) in the ventral tegmental area of rat: role in modulation of the mesolimbic-dopamine reward pathway. Neuropharmacology 110, 198-210.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Sanyasi S, Majhi RK, Kumar S, Mishra M, Ghosh A, Suar M, Satyam PV, Mohapatra H, Goswami C, Goswami L. (2016) Carboxy Methyl Tamarind Polysaccharide-capped silver Nanoparticles (AgNP) inhibit biofilm formation by blocking FtsZ-FtsA complex-mediated microbial cell division. Scientific reports 6, 24929.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Majhi RK, Swain N, Giri SC, Kar S, Samanta L, Goswami C (2016) TRPV4 is endogenously expressed in vertebrate spermatozoa and regulates intracellular calcium in human sperm. Biochemical and Biophysical Research Communications. 473, 781-8.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Das JK, Mahapatra R, Patro S, Goswami C, Suar M. (2016) Lactobacillus acidophilus binds to MUC3 component of cultured intestinal epithelial cells with the highest affinity. FEMS Microbiology Letters 363, 8.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Mohanty G, Swain N, Goswami C, Kar S, Samanta L (2016) Histone retention, protein carbonylation, and lipid peroxidation in spermatozoa: Possible role in recurrent pregnancy loss. Systems Biology in Reproductive Medicine 62, 201-12.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Majhi RK, Kumar A, Yadav M, Kumar P, Maity A, Giri SC, Goswami C (2016) Light and electron microscopic study of mature spermatozoa from white pekin duck (Anas platyrhynchos): An ultra-structural and molecular analysis. Andrology 4, 232-44.
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2015
+      </h2>
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Majhi RK, Saha S, Kumar A, Ghosh A, Swain N, Goswami L, Mohapatra PP, Maity A, Sahoo V, Kumar A, Goswami C (2015) Expression of temperature-sensitive ion channel TRPM8 in sperm cells correlates with vertebrate evolution. PeerJ. 3: e1310.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Majhi RK, Sahoo SS, Yadav M, Chattopadhyay S, Goswami C (2015) Functional Expression of TRPV Channels in T cells and their implications in immune regulation. The FEBS Journal. 282, 2661-81.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumari S, Kumar A, Sardar P, Yadav M, Majhi RK, Kumar A, Goswami C (2015) Influence of membrane cholesterol in the molecular evolution and functional regulation of TRPV4. Biochemical and Biophysical Research Communications 456, 312-9.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Rath S, Das L, Kokate S.B, Chattopadhyay S, Goswami C, Chattopadhyay R, Crowe S.E., Bhattacharyya A (2015) Regulation of Noxa-mediated apoptosis in Helicobacter pylori-infected gastric epithelial cells. FASEB J 29, 796-806.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Kumari S, Majhi RK, Swain N, Yadav M, Goswami C. (2015) Regulation of TRP channels by steroids: Implications in physiology and diseases. General and Comparative Endocrinology S0016-6480(14)00398-0.
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2014
+      </h2>
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Bhandari A, Goswami C (2014) Surveying genetic variants and molecular phylogeny of cerebral cavernous malformation gene, CCM3/PDCD10. Biochemical and Biophysical Research Communications 455, 98-106.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Sahu SK, Mohanty S, Chakrabarti S, Maji S, Reddy RR, Jha AK, Goswami C, Kundu CN, Rajasubramaniam S, Verma SC, Choudhuri T. (2014) Kaposi Sarcoma Herpes Virus Latency Associated Nuclear Antigen Protein Release the G2/M Cell Cycle Blocks by Modulating ATM/ATR Mediated Checkpoint Pathway. PLoS One. 9(6): e100228.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Bhandari A, Sarde SJ and Goswami C. (2014) Molecular phylogeny of C1 inhibitor depicts two immunoglobulin-like domains fusion in fishes and ray-finned fishes specific intron insertion after separation from zebrafish. Biochemical and Biophysical Research Communications. 450, 219-26.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Bhandari A, Sarde SJ, Goswami C. (2014) Sequence, synteny, phylogeny and variants analyses of heparin cofactor II. Immunobiology 219, 713-28.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Pradhan N, Pratheek BM, Garai A, Kumar A, Meena VS, Ghosh S, Singh S, Kumari S, Chandrashekar TK, Goswami C, Chattopadhyay S, Kar S, Maiti PK. (2014) Induction of apoptosis by Fe(salen)Cl through caspase-dependent pathway specifically in tumor cells. Cell biology international 38, 1118-31.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Pati R, Mehta R, Mohanty S, Padhi A, Sengupta M, Baskarlingam V, Goswami C, Sonawane A. (2014) Topical application of zinc oxide nanoparticles reduce bacterial skin infection in mice and exhibit antibacterial activity by inducing oxidative stress response and cell membrane disintegration in macrophages. Nanomedicine S1549-9634(14)00114-2.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Sanyasi S, Kumar A, Goswami C, Bandyopadhyay A, Goswami L (2014) A carboxy methyl tamarind polysaccharide matrix for adhesion and growth of osteoclast-precursor cells. Carbohydrate Polymers, 101, 1033-1042.
+        </a>
+      </li>
+      
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2013
+      </h2>
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Bhandari A, Sarde SJ, Goswami C. (2013) Sequence, phylogenetic and variant analyses of Antithrombin III. Biochemical and Biophysical Research Communications. 440, 714-24
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Majhi R K, Kumar A, Yadav M, Swain N, Kumari S, Saha A, Pradhan A, Goswami L, Saha S, Samanta L, Maity A, Nayak TK, Chattopadhyay S, Rajakuberan C, Kumar A, Goswami C. (2013) Thermosensitive ion channel TRPV1 is endogenously expressed in the sperm of a freshwater teleost fish (Labeo rohita) and regulates sperm motility. Channels 7, 1-10
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Majhi R, Yadav M, Szallasi A, Goswami C. (2013) TRPV1 activators (“vanilloids”) as neurotoxins. Book chapter (Springer)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Goswami L, Goswami C (2013) Importance of TRP channels in pain: implications for stress. Frontiers in Bioscience. (Schol Ed) 5, 19-38
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2012
+      </h2>
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C (2012) TRPs-mediated cytoskeletal reorganization: implications for disease and drug development. Book chapter (Springer) ISBN: 978-1-62703-076-2. 13-39
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C (2012) TRPV1-tubulin complex: involvement of membrane tubulin in the regulation of chemotherapy-induced peripheral neuropathy. J Neurochem. 123, 1-13
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kumar A, Bhandari A, Sinha R, Sardar P, Sushma, Goyal P, Goswami C, and Grapputo A. (2012) Molecular phylogeny of OVOL genes illustrates a conserved C2H2 zinc finger domain coupled by hypervariable unstructured regions. PlosOne 7, e39399
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Sardar P, Kumar A, Bhandari A, Goswami C. (2012) Conservation of tubulin-binding sequences in TRPV1 throughout evolution. PlosOne 7, e31448
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2011
+      </h2>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Majhi R, Sardar P, Goswami L, Goswami C. (2011) Right time - right location - right move: TRPs find motors for common functions. Channels (Austin). 5. 375-381
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C, Kuhn J, Dina OA, Fernandez-Ballester G, Levine JD, Ferrer-Montiel A, Hucho T. (2011) Estrogen destabilizes microtubules through an ion-conductivity independent TRPV1 pathway. J Neurochem. 117, 995-1008
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+        2010
+      </h2>
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C (2010) Structural and functional regulation of growth cone, filopodia and synaptic sites by TRPV1. Journal of Communicative & Integrative Biology 3, 614-618
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Verma P, Kumar A, Goswami C. (2010) TRPV4-mediated channelopathies. Channels (Austin). 4, 319-328
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C, Goswami L. (2010) Filamentous microtubules in the neuronal spinous process and the role of microtubule regulatory drugs in neuropathic pain. Neurochem Int. 57, 497-503
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C, Kuhn J, Heppenstall PA, Hucho T. (2010) Importance of non-selective cation channel TRPV4 interaction with cytoskeleton and their reciprocal regulations in cultured cells. PLOS one. 5 e11654
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C, Rademacher N, Smalla KH, Kalscheuer V, Ropers HH, Gundelfinger ED, Hucho T. (2010) TRPV1 acts as a synaptic protein and regulates vesicle recycling. J Cell Sci. 123, 2045-57.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C, Islam MS. (2010) Transient Receptor Potential channels: What's happening? Reflections in the wake of the 2009 TRP Meeting, Karolinska Institutet, Stockholm. Channels (Austin). 4, 124-35
+        </a>
+      </li>
+      
+      <h2 class="text-2xl mt-5 pl-5 font-sans">
+      Before
+      </h2>
+
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Kuhn J, Dina Y, Goswami C., Suckow V, Levine J, Tim Hucho. (2008) GPR30 Estrogen Receptor Agonists Induce Mechanical Hyperalgesia in the Rat. European journal of neuroscience. 27, 1700-9.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C. and Hucho T. (2008) Submembraneous microtubule cytoskeleton: Biochemical and functional interplay of TRP channels with the cytoskeleton. FEBS journal. 275, 4684-4699. (Invited review)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C. and Hucho T. (2008) Invited review series: Novel aspects of the submembraneous microtubule cytoskeleton. FEBS journal. 275, 4653. (Invited review)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C. and Hucho T. (2007) TRPV1 expression-dependent initiation and regulation of filopodial. J Neurochem. 103, 1319-33.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          M. Motazacker, B. Rost, T. Hucho, M. Garshasbi, K. Kahrizi, R. Ullmann, S. Abedini, S. Nieh, S. Amini, Goswami C., A. Tzschach, L. Jensen, D. Schmitz, H.H. Ropers, H. Najmabadi, A.W. Kuss A (2007) Defect in the Ionotropic Glutamate Receptor 6 Gene (GRIK2) is Associated with Autosomal Recessive Mental Retardation. American Journal of Human Genetics 81, 792-8.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C., Hucho T. and Hucho F. (2007) Identification and characterisation of novel tubulin-binding motifs located within the C-terminus of TRPV1. J Neurochem. 101, 250-262.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C., Schmidt H. and Hucho F. (2007) Regulation of growth cone morphology and movement by TRPV1 activation. FEBS journal. 274, 760-72. (Cover page)
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C., Dreger M., Otto H., Schwappach B. and Hucho F. (2006) Rapid disassembly of dynamic microtubules upon activation of the capsaicin receptor TRPV1. J Neurochem. 96, 254-266.
+        </a>
+      </li>
+      
+      <li class="pt-8">
+        <a href="insert link" target="__blank">
+          Goswami C., Dreger M., Jahnel R., Bogen O., Gillen C. and Hucho F. (2004) Identification and characterization of a Ca2+-sensitive interaction of the vanilloid receptor TRPV1 with tubulin. J Neurochem. 91, 1092-103.
+        </a>
+      </li>
+      
+      
+     </ul>
+    </div>
+    <!--]-->
+<footer class="container mx-auto flex flex-row flex-col mt-5 mb-5 md:flex-row items-start lg:rounded-xl md:rounded w-screen">
+   <div id="sign" class="basis-full w-screen" >
+  <span id="sign_light">
+    <img alt="Dr. Chandan Goswami" class="filter invert invert-0 mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+  <span id="sign_dark">
+    <img alt="Dr. Chandan Goswami" class=" mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+</div>
+	 
+     
+	 
+	 
+<div class="basis-full w-screen">
+  <span id="logo_light">
+    <img alt="NISER logo" class="h-30  filter invert invert-0  mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+  <span id="logo_dark">
+    <img alt="NISER logo" class="h-30 mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+</div>
+
+     <div class="basis-full pt-8 &lt;md:p-3 &lt;md:mx-auto">
+        Managed by
+        <a class="contact pl-2" href="mailto:bhatiavikash999@gmail.com" target="__blank">
+         Vikash Kumar
+      </a>
+     </div>
+    </footer>
+
+
+   </main>
+  </div>
+  <script>
+   window.__INITIAL_STATE__='{"pinia":{}}'
+  </script>
+  <link href="/assets/Marquee.82662069.css" rel="stylesheet"/>
+  <link href="/assets/app.2c82276b.css" rel="stylesheet"/>
+
+  <script>
+// Get the publications list element
+const publicationsList = document.querySelectorAll("li");
+
+// Filter out items marked for skipping
+const filteredPublications = Array.from(publicationsList).filter(
+  (publication) => !publication.classList.contains("skip-publication")
+);
+
+// Reverse the filtered list items so that the last publication becomes the first
+const reversedPublications = filteredPublications.reverse();
+
+// Loop through the filtered and reversed list to assign visible numbers
+reversedPublications.forEach((publication, index) => {
+  const publicationNumber = index + 1;
+
+  const publicationLink = publication.querySelector("a").getAttribute("href");
+  const publicationText = publication.querySelector("a").textContent;
+
+  // Create a new anchor element and set its attributes
+  const anchor = document.createElement("a");
+  anchor.setAttribute("href", publicationLink);
+  anchor.setAttribute("target", "_blank");
+  anchor.textContent = `${publicationNumber}. ${publicationText}`;
+
+  // Replace the content of the visible list item with the new anchor element
+  publication.innerHTML = "";
+  publication.appendChild(anchor);
+});
+  </script>
+  
+  
+ <script>
+ const toggleButton = document.getElementById("toggleButton");
+const body = document.body;
+const signLight = document.getElementById("sign_light");
+const signDark = document.getElementById("sign_dark");
+const logoLight = document.getElementById("logo_light");
+const logoDark = document.getElementById("logo_dark");
+// Function to set the theme
+function setTheme(theme) {
+    if (theme === "dark") {
+        body.classList.add("dark");
+        signLight.style.display = "none";
+        signDark.style.display = "block";
+		logoLight.style.display = "none";
+        logoDark.style.display = "block";
+    } else {
+        body.classList.remove("dark");
+        signLight.style.display = "block";
+        signDark.style.display = "none";
+		logoLight.style.display = "block";
+        logoDark.style.display = "none";
+    }
+}
+
+// Toggle the theme when the button is clicked
+toggleButton.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
+// Initialize the theme based on user preference
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDarkMode) {
+    setTheme("dark");
+} else {
+    setTheme("light");
+}
+
+</script>
+
+  
+ </body>
+</html>

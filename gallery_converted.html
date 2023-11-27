@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="overflow-x:hidden">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="./favicon.ico" rel="icon" sizes="any"/>
+  <link href="./apple-touch-icon.png" rel="apple-touch-icon"/>
+  <script>
+   !function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("vueuse-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()
+</script>
+ 
+ <style>
+   *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}a{color:inherit;text-decoration:inherit}body{margin:0;font-family:inherit;line-height:inherit}button{font-family:inherit;font-size:100%;line-height:1.15;margin:0;text-transform:none;background-color:transparent;background-image:none;padding:0;line-height:inherit;color:inherit}button{-webkit-appearance:button}button{cursor:pointer}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}h2{font-size:inherit;font-weight:inherit}img{border-style:solid;display:block;vertical-align:middle;max-width:100%;height:auto}h2{margin:0}:root{--prism-scheme:light;--prism-foreground:#6e6e6e;--prism-background:#f4f4f4;--prism-comment:#a8a8a8;--prism-string:#555555;--prism-literal:#333333;--prism-keyword:#000000;--prism-function:#4f4f4f;--prism-deleted:#333333;--prism-class:#333333;--prism-builtin:#757575;--prism-property:#333333;--prism-namespace:#4f4f4f;--prism-punctuation:#ababab;--prism-decorator:var(--prism-class);--prism-operator:var(--prism-punctuation);--prism-number:var(--prism-literal);--prism-boolean:var(--prism-literal);--prism-variable:var(--prism-literal);--prism-constant:var(--prism-literal);--prism-symbol:var(--prism-literal);--prism-interpolation:var(--prism-literal);--prism-selector:var(--prism-keyword);--prism-keyword-control:var(--prism-keyword);--prism-regex:var(--prism-string);--prism-json-property:var(--prism-property);--prism-inline-background:var(--prism-background);--prism-comment-style:italic;--prism-url-decoration:underline;--prism-line-number:#a5a5a5;--prism-line-number-gutter:#333333;--prism-line-highlight-background:#eeeeee;--prism-selection-background:#aaaaaa;--prism-marker-color:var(--prism-foreground);--prism-marker-opacity:.4;--prism-marker-font-size:.8em;--prism-font-size:1em;--prism-line-height:1.5em;--prism-font-family:monospace;--prism-inline-font-size:var(--prism-font-size);--prism-block-font-size:var(--prism-font-size);--prism-tab-size:2;--prism-block-padding-x:1em;--prism-block-padding-y:1em;--prism-block-margin-x:0;--prism-block-margin-y:.5em;--prism-block-radius:.3em;--prism-inline-padding-x:.3em;--prism-inline-padding-y:.1em;--prism-inline-radius:.3em}#app,body,html{height:100%;margin:0;padding:0}.icon-btn{cursor:pointer;display:inline-block;opacity:.75;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition-property:background-color,border-color,color,fill,stroke,opacity,-webkit-box-shadow,-webkit-transform,filter,backdrop-filter;-o-transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,-webkit-box-shadow,transform,-webkit-transform,filter,backdrop-filter;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s;-webkit-transition-duration:.2s;-o-transition-duration:.2s;transition-duration:.2s;font-size:.9em}.icon-btn:hover{opacity:1;--tw-text-opacity:1;color:rgba(13,148,136,var(--tw-text-opacity))}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border-0{border-width:0}.flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.inline-flex{display:-webkit-inline-box;display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex}.grid{display:-ms-grid;display:grid}.basis-full{flex-basis:100%}.flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex-wrap{-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.items-start{-webkit-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;align-items:flex-start}.items-center{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.justify-start{-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start}.flex-initial{-webkit-box-flex:0;-ms-flex:0 1 auto;-webkit-flex:0 1 auto;flex:0 1 auto}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.font-medium{font-weight:500}.h-4{height:1rem}.h-30{height:7.5rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.hover\:text-4xl:hover,.text-4xl{font-size:2.25rem;line-height:2.5rem}.mx-auto{margin-left:auto;margin-right:auto}.mt-5{margin-top:1.25rem}.mt-4{margin-top:1rem}.mt-1{margin-top:.25rem}.mb-5{margin-bottom:1.25rem}.ml-auto{margin-left:auto}.ml-1{margin-left:.25rem}.p-2{padding:.5rem}.p-4{padding:1rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.pt-8{padding-top:2rem}.pl-2{padding-left:.5rem}.pt-7{padding-top:1.75rem}.pb-150px{padding-bottom:150px}.pl-3{padding-left:.75rem}.fixed{position:fixed}.text-center{text-align:center}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.uppercase{text-transform:uppercase}.hover\:underline:hover,.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.w-screen{width:100vw}.w-4{width:1rem}.transition-all{-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);-o-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transition-duration:.15s;-o-transition-duration:.15s;transition-duration:.15s}.duration-500{-webkit-transition-duration:.5s;-o-transition-duration:.5s;transition-duration:.5s}.duration-100{-webkit-transition-duration:.1s;-o-transition-duration:.1s;transition-duration:.1s}.filter{--tw-blur:var(--tw-empty, );--tw-brightness:var(--tw-empty, );--tw-contrast:var(--tw-empty, );--tw-grayscale:var(--tw-empty, );--tw-hue-rotate:var(--tw-empty, );--tw-invert:var(--tw-empty, );--tw-saturate:var(--tw-empty, );--tw-sepia:var(--tw-empty, );--tw-drop-shadow:var(--tw-empty, );-webkit-filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.invert{--tw-invert:invert(100%)}.scroll-smooth{scroll-behavior:smooth}@media (min-width:640px){.sm\:m-0{margin:0}.sm\:mb-0{margin-bottom:0}.sm\:max-w-14\/14{max-width:100%}.sm\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}}@media (min-width:768px){.md\:rounded{border-radius:.25rem}.md\:rounded-lg{border-radius:.5rem}.md\:flex-row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:mx-auto{margin-left:auto;margin-right:auto}.md\:mt-3{margin-top:.75rem}.md\:mr-auto{margin-right:auto}.md\:mt-0{margin-top:0}.md\:max-w-19\/20{max-width:95%}.md\:pb-70px{padding-bottom:70px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:768px) and (max-width:1023.9px){.\@md\:mb-1{margin-bottom:.25rem}}@media (min-width:1024px){.lg\:rounded-xl{border-radius:.75rem}.lg\:mx-auto{margin-left:auto;margin-right:auto}.lg\:mt-5{margin-top:1.25rem}.lg\:mb-1{margin-bottom:.25rem}.lg\:max-w-13\/14{max-width:92.857143%}.lg\:pb-70px{padding-bottom:70px}}@media (min-width:1280px){.xl\:mr-10{margin-right:2.5rem}.xl\:ml-10{margin-left:2.5rem}.xl\:px-40{padding-left:10rem;padding-right:10rem}.xl\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}{.\<md\:text-2xl{font-size:1.5rem;line-height:2rem}.\<md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.\<md\:my-5{margin-top:1.25rem;margin-bottom:1.25rem}.\<md\:mx-auto{margin-left:auto;margin-right:auto}.\<md\:ml-auto{margin-left:auto}.\<md\:p-3{padding:.75rem}.\<md\:px-20{padding-left:5rem;padding-right:5rem}.\<md\:pr-6{padding-right:1.5rem}.\<md\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.\<md\:w-screen{width:100vw}}
+  /* Button styles */
+.toggle-button {
+        position: fixed;
+        bottom: 20px; /* Adjust the desired distance from the bottom */
+        right: 20px; /* Adjust the desired distance from the right */
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's on top of other elements */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .hover-zoom:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+    transition: transform 0.3s ease;}
+
+    
+
+    .image-container {
+    flex: 0 0 calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+}
+
+body.dark #vik_sign {
+  color: white; /* Color in dark mode */
+}
+.image-container.portrait {
+    flex: 0 0 calc(50% - 10px);
+    order: 2;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.image-wrapper:hover .image-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+   nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Set a fixed width to prevent wrapping */
+  white-space: nowrap; /* Prevent wrapping to the next line */
+  overflow-x: auto; /* Add horizontal scrolling for small screens */
+}
+/* Add any additional styles you need */
+
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="./dark-mode/dark_mode.css">
+
+
+
+
+  <title>
+   C G Lab NISER - Defeating Pain
+   </title>
+  <meta content="Defeating Pain" name="description"/>
+  <meta content="Pain, NISER, research, biology, defeating pain" name="keywords"/>
+  <meta content="2" name="head:count"/>
+ </head>
+ <body>
+  <div data-server-rendered="true" id="app">
+   <main class="text-center text-gray-700 dark:text-gray-200">
+    <div class="w-screen items-center fixed" style="width:100%">
+      <header class="lg:mt-5 md:mt-3 lg:mx-auto md:mx-auto container lg:max-w-13/14 md:max-w-19/20 sm:max-w-14/14 sm:m-0" style="background-color: white; border-radius: 10px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); padding: 10px;">
+
+        <div class=" mx-auto flex nowrap p-2 flex-col md:flex-row items-start lg:rounded-xl md:rounded-lg transition-all duration-500 text-gray-500 &lt;md:text-white">
+          <nav class="ml-auto md:mr-auto flex flex-initial nowrap items-start text-start uppercase font-sans text-3xl " style="display: flex; align-items: center; overflow-x: scroll; width: 100%;">
+              <a aria-current="page" class="router-link-active router-link-exact-active hover:bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./research_converted.html">
+                  Research
+              </a>
+              <a class="hover-bg-gray-200 rounded-md px-4 mt-1 transition-all duration-100 hover-text-4xl &lt;md:text-2xl" href="./people_converted.html">
+                  People
+              </a>
+         <span class="title-font font-medium items-center ">
+                  <a class="mt-1 text-4xl hover-underline xl:px-40 md:text-3xl &lt;md:text-3xl" draggable="false" href="./index.html">
+                      CG LAB
+                  </a>
+              </span>
+			  
+              <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./publications_converted.html">
+                  Publications
+              </a>
+              <a class="hover-bg-gray-200 rounded-md px-2 mt-1 xl:ml-10 transition-all duration-100 hover-text-4xl &lt;md:text-2xl &lt;md:ml-auto &lt;md:pr-6" href="./gallery_converted.html">
+                  Gallery
+              </a>
+          </nav>
+      
+
+
+
+       <button class="toggle-button" id="toggleButton">
+        <svg height="1.2em" preserveaspectratio="xMidYMid meet" viewbox="0 0 32 32" width="1.2em">
+            <path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor">
+            </path>
+            <path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor">
+            </path>
+            <path d="M2 15.005h5v2H2z" fill="currentColor">
+            </path>
+            <path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor">
+            </path>
+            <path d="M15 25.005h2v5h-2z" fill="currentColor">
+            </path>
+            <path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor">
+            </path>
+            <path d="M25 15.005h5v2h-5z" fill="currentColor">
+            </path>
+            <path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor">
+            </path>
+            <path d="M15 2.005h2v5h-2z" fill="currentColor">
+            </path>
+           </svg>
+       </button>
+
+
+ 
+      </div>
+     </header>
+    </div>
+    <div class="pb-150px md:pb-70px lg:pb-70px">
+    </div>
+    <!--[-->
+    <div class="pb-150px md:pb-70px lg:pb-70px">
+      <!-- Photo Gallery Section -->
+      <div class="gallery-section" style="padding: 20px; background-color: #F7F7F7; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <h2 class="section-title" style="font-size: 1.5rem; text-transform: uppercase; margin-top: 2rem; color: #0074B6;">Photo Gallery</h2>
+    <div class="image-grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: flex-start;">
+      
+      
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper">
+    <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/dn2.jpg" alt="dn2.jpg" style="width: 100%; height: auto; border-radius: 0px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+      
+  <div class="image-caption">Farewell of Shamit, Tejas, Harshit and Shreya</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/IMG-20210827-WA0008 - Shamit Kumar.jpg" alt="IMG-20210827-WA0008 - Shamit Kumar.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption">Srujanika got gold medal in 2021</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/EMBO_group.jpg" alt="EMBO_group.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption">EMBO Meeting, November 2022.</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 15px);">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/embo grp 2.jpg" alt="embo grp 2.jpg" style="max-width: 100%; border-radius: 0px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption">EMBO Meeting Dinner at NISER</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/embo grp 3.jpg" alt="embo grp 3.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption">EMBO 2022</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+ <div class="image-wrapper">
+
+    <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/Snapchat-118171004 - Shamit Kumar2.jpg" alt="Snapchat-118171004 - Shamit Kumar2.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+ <div class="image-caption">These three guys are missing.</div>
+    </div>
+
+</div>
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/grills2.jpg" alt="grills2.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+ <div class="image-caption" style="position: absolute;" >...</div>
+       </div>
+ <br><div class="image-wrapper">
+
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/old_web1.jpg" alt="old_web1.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute;"> Once upon a time... </div>
+    </div>
+</div>
+
+<div class="image-container_portrait" style="flex: 0 0 calc(25% - 10px); height: 100%;">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/old_web7.jpg" alt="old_web7.jpg" style="margin-top:2.5%; max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute;" > Lab is safe. Don't worry!</div>
+<!-- Don't worry, the lab's guardian has a trusty sword! -->
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/old_web2.jpg" alt="old_web2.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+
+<div class="image-caption" style="position: absolute;" >In IOP Campus ca 2012</div>
+ </div>
+<br>
+<div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/old_web5.jpg" alt="old_web5.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute;" >Rik's Birthday</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/old_web3.jpg" alt="old_web3.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+      
+
+ <div class="image-caption" style="position: absolute;" >Lab Members in IOP campus</div>
+</div>
+  <br>   
+<div class="image-wrapper">
+
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/old_web4.jpg" alt="old_web4.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute;" >Friendship captured in a click.</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/old_web6.jpg" alt="old_web6.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption"> B'day Party</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;" >
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/old_web8.jpg" alt="old_web8.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute;">Manoj receiving award in Banglore Microscopy Course</div>
+    </div> <br>
+    <div class="image-wrapper">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/all.jpeg" alt="all.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption">Lab Members ca2021. PC: Nilesh.</div>
+    </div>
+</div>
+
+<!-- Image 1 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/1.jpg" alt="1.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Hill Top Party 2022</div>
+    </div>
+</div>
+
+<!-- Image 2 and 3 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/2.jpg" alt="2.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Hill Top Party 2022</div>
+    </div>
+	
+    <div class="image-wrapper" style=" margin-top:12%;" >
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/3.jpg" alt="3.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <!-- Caption for 3.jpg will start here at the top -->
+        <div class="image-caption">Hill Top Party 2022 pc: Dr K CS Panigrahi </div>
+    </div>
+</div>
+
+<!-- Image 4 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/4.jpg" alt="4.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Hill Top Party 2022</div>
+    </div>
+</div>
+
+
+<!-- Image 6 -->
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+  <div class="image-wrapper" style="height: 100%; overflow: hidden;">
+    <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/6.jpg" alt="10.jpg" style="width: 100%; height: 30vw; object-fit: cover; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+    <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Hill Top Party 2022</div>
+  </div>
+</div>
+<!-- Image 7 and 18 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); justify-content: center;">
+    <div class="image-wrapper" >
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/7.jpg" alt="7.jpg" style="height: 16vw; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); display: block;" onclick="openPopupImage(this.src);">
+        <div class="image-caption">Hill Top Party 2022 </div>
+    </div>
+
+    <div class="image-wrapper" style="position: relative; padding-top:5%;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/18.jpg" alt="18.jpg" style="height: 13vw; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <!-- Caption for 18.jpg will start here at the top -->
+        <div class="image-caption">Feeding the Lab</div>
+    </div>
+</div>
+
+<!-- Image 10 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative; ">
+  <div class="image-wrapper" style="height: 100%; overflow: hidden;">
+    <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/10.jpg" alt="10.jpg" style="width: 100%; height: 30vw; object-fit: cover; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+    <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">From lectures to sandwiches, this professor does it all!</div>
+  </div>
+</div>
+
+
+
+
+<!-- Images 11 to 20 -->
+<!-- Image 11 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/11.jpg" alt="11.jpg" style="max-width: 85%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Ram's Birthday</div>
+    </div>
+</div>
+
+<!-- Image 12 and 13 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/12.jpg" alt="12.jpg" style="margin-bottom: 3px; max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Ram's Birthday</div>
+    </div>
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/13.jpg" alt="13.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" > Tip filling competition. Rakesh is just giving proxy. </div>
+    </div>
+</div>
+
+<!-- Image 14 and 17 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/14.jpg" alt="14.jpg" style="margin-bottom: 3px; max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">...</div>
+    </div>
+
+<!-- Image 17 -->
+    <div class="image-wrapper" style="position: relative;">
+        <div class="image-caption""></div>
+    </div>
+</div>
+
+<!-- Image 19 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/19.jpg" alt="19.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Time to leave IOP campus. All members of the four groups together.</div>
+    </div>
+</div>
+
+<!-- Image 24 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/24.jpg" alt="24.jpg" style="margin-top: 12px; max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" >DAAD RA Meeting 2017, Embassy of Republic of Germany, New Delhi</div>
+    </div>
+</div>
+
+<!-- Image 20 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/20.jpg" alt="20.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Time to leave IOP campus. All members of the four groups together.</div>
+    </div>
+</div>
+
+<!-- Image 21 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/21.jpg" alt="21.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;"> Rasmita got PhD Degree on July 12, 2022</div>
+    </div>
+</div>
+
+<!-- Image 22 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/22.jpg" alt="22.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">DAAD RA Meeting 2017, Embassy of Republic of Germany, New Delhi</div>
+    </div>
+</div>
+
+<!-- Image 23 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/23.jpg" alt="23.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">DAAD RA Meeting 2017, Embassy of Republic of Germany, New Delhi</div>
+    </div>
+</div>
+
+<!-- Image 25 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/25.jpg" alt="25.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;"> Prof. K. VijyaRaghavan visit to Biology, NISER 24 March 2023</div>
+    </div>
+</div>
+
+<!-- Image 26 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/26.jpg" alt="26.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">With Prof. Dulal Panda, IIT Bombay and Prof. Mahadeb Pal, Bose Institute in Haridwar, Uttarakhand</div>
+    </div>
+</div>
+
+<!-- Image 32 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); position: relative;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/32.jpg" alt="32.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Prof. Dr. Klaus Palme, Germany visiting Lab</div>
+    </div>
+</div>
+
+
+
+
+<!-- Add another In Zadar, Croatia during ERASMUS Program visit, summer 2018. It must be deleted unknowingly -->
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/27.jpg" alt="28.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">In Zadar, Croatia during ERASMUS Program visit, summer 2018</div>
+    </div>
+</div>
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/28.jpg" alt="28.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">In Zadar, Croatia during ERASMUS Program visit, summer 2018</div>
+    </div>
+</div>
+
+
+
+<!-- Image 30 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/30.jpg" alt="30.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">With Prof. Krishanu Ray, TIFR during EMSI meeting, Bhubaneswar</div>
+    </div>
+</div>
+
+<!-- Image 29 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/29.jpg" alt="29.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Mahabalipuram, Tamil Nadu during YIM meeting 2020</div>
+    </div>
+</div>
+<!-- Images 31 to 40 -->
+<!-- Image 31-->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/31.jpg" alt="30.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Pushing the hanging rock in Mahabalipuram</div>
+    </div>
+</div>
+<!-- Image 36-->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/36.jpg" alt="30.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">In front of Prof. Hucho Lab, after the PhD thesis defense, on March 29, 2006 </div>
+    </div>
+</div>
+
+<!-- Add captions for these images as needed, similar to the structure above -->
+
+<!-- Image 33 and 35 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+  <div class="image-wrapper" style="position: relative;">
+    <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/33.jpg" alt="33.jpg" style="margin-bottom:15px;  max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+    <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">With Family Members on a B'day</div>
+  </div>
+  <div class="image-wrapper" style="position: relative;">
+    <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/35.jpg" alt="35.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+    <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">...</div>
+  </div>
+</div>
+
+<!-- Image 34 and 41 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+  <div class="image-wrapper" style="position: relative;">
+    <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/34.jpg" alt="34.jpg" style="margin-bottom:15px; max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+    <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Lab outing ca 2016</div>
+  </div>
+  <div class="image-wrapper" style="position: relative;">
+    <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/41.jpg" alt="41.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+    <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Ashutosh and others on convocation day. The first PhD batch of Biology NISER got degree.</div>
+  </div>
+</div>
+
+<!-- Image 45 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/45.jpg" alt="45.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">International Society of Neurochemistry (ISN) and the European Society of Neurochemistry (ESN) Meeting with all Lab members in Warshaw, Poland in Summer of 2003</div>
+    </div>
+</div>
+
+<!-- Image 42 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/42.jpg" alt="42.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">JNU Days, Delhi (Jan 1997)</div>
+    </div>
+</div>
+
+<!-- Image 43 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/43.jpg" alt="43.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">JNU Days, Agra</div>
+    </div>
+</div>
+
+<!-- Image 44 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/44.jpg" alt="44.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">JNU Days, Delhi</div>
+    </div>
+</div>
+
+<!-- Image 46 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/46.jpg" alt="46.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">After thesis defense with all committee members  </div>
+    </div>
+</div>
+
+<!-- Image 47 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/47.jpg" alt="47.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">After thesis defense with all committee members</div>
+    </div>
+</div>
+
+<!-- Image 48 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/48.jpg" alt="48.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Convocation Day of first MSc bio batch of NISER in IOP ground,2012</div>
+    </div>
+</div>
+
+<!-- Image 50 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/50.jpg" alt="50.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Lab gathering ca 2016-17</div>
+    </div>
+</div>
+
+<!-- Images 51 to 60 -->
+
+<!-- Continue this structure up to 60 -->
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/54.jpg" alt="54.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Prof. Rakesh Majhi visiting NISER Animal House</div>
+    </div>
+</div>
+
+
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="" alt="" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">...</div>
+    </div>
+</div>
+
+
+
+<!-- Image 56 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/56.jpg" alt="56.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Family visit Paris 2009</div>
+    </div>
+</div>
+
+<!-- Image 57 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/57.jpg" alt="57.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Family visit Paris 2009</div>
+    </div>
+</div>
+
+<!-- Image 59 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/59.jpg" alt="59.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Family visit Paris 2009</div>
+    </div>
+</div>
+
+
+
+
+<!-- Image 60 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/60.jpg" alt="60.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">In ICE, from Berlin to Munich 2008</div>
+    </div>
+</div>
+
+<!-- Image 15 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/15.jpg" alt="15.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">...</div>
+    </div>
+</div>
+
+<!-- Image 49 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/49.jpg" alt="49.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Srujanika got gold medal in 2021</div>
+    </div>
+</div>
+
+<!-- Image 55 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/55.jpg" alt="55.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">First passport pic 1999</div>
+    </div>
+</div>
+
+<!-- Image 38 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/38.jpg" alt="38.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">...</div>
+    </div>
+</div>
+
+<!-- Image 39 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/39.jpg" alt="39.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">PhD students once upon a time</div>
+    </div>
+</div>
+
+<!-- Image 52 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); height: 77%; overflow: hidden;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/52.jpg" alt="52.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 50%; left: 0; width: 20%; text-align: center;">Ashutosh submitting thesis in Feb 2016</div>
+    </div>
+</div>
+
+
+<!-- Image 53 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); height: 80%; overflow: hidden;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/53.jpg" alt="53.jpg" style="max-height: 100%; width: 100%; object-fit: cover; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="bottom:50%; left: 0; width: 20%; text-align: center;">Srujanika got gold medal in 2021</div>
+    </div>
+</div>
+
+
+<!-- Image 58 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px); height: 80%; overflow: hidden;">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/58.jpg" alt="58.jpg" style="max-height: 80%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 50%; left: 0; width: 30%; text-align: center;">Shamit with Best Oral Presentation Award at ILS, Bhubaneswar, 2022</div>
+    </div>
+</div>
+
+<!-- Image 61 -->
+<div class="image-container" style="flex: 0 0 calc(25% - 10px);">
+    <div class="image-wrapper" style="position: relative;">
+        <img class="gallery-image hover-zoom" src="./img/gallery/Photo Gallery/16novup/61.jpg" alt="61.jpg" style="max-width: 100%; border-radius: 0%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);" onclick="openPopupImage(this.src);">
+        <div class="image-caption" style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">Another B'day party</div>
+    </div>
+</div>
+
+<br>
+
+
+
+<!-- Add more images for the Photo Gallery here -->
+          </div>
+     </div>
+
+      <!-- Image Gallery Section -->
+      <section class="gallery-section" style="padding: 20px; background-color: #F7F7F7; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <h2 class="section-title" style="font-size: 1.5rem; text-transform: uppercase; margin-top: 2rem; color: #0074B6;">Image Gallery</h2>
+          <div class="image-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; justify-items: center;">
+            <img class="gallery-image hover-zoom" src="./img/gallery/Image Gallery/Main page Image1 - Rakesh Kumar Majhi.png " alt="Photo 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"  onclick="openPopupImage('./img/gallery/Image Gallery/Main page Image1 - Rakesh Kumar Majhi.png ');">
+            <img class="gallery-image hover-zoom" src="./img/gallery/Image Gallery/Main page Image3 - Rakesh Kumar Majhi.png " alt="Photo 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"  onclick="openPopupImage('./img/gallery/Image Gallery/Main page Image3 - Rakesh Kumar Majhi.png ');">
+            <img class="gallery-image hover-zoom" src="./img/gallery/Image Gallery/Main page Image4 - Rakesh Kumar Majhi.png " alt="Photo 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"  onclick="openPopupImage('./img/gallery/Image Gallery/Main page Image4 - Rakesh Kumar Majhi.png ');">
+            <img class="gallery-image hover-zoom" src="./img/gallery/Image Gallery/Main page Image5 - Rakesh Kumar Majhi.png " alt="Photo 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"  onclick="openPopupImage('./img/gallery/Image Gallery/Main page Image5 - Rakesh Kumar Majhi.png ');">
+            
+            <img class="gallery-image hover-zoom" src="./img/gallery/Image Gallery/Testis-2 - Rakesh Kumar Majhi.jpg " alt="Photo 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"  onclick="openPopupImage('./img/gallery/Image Gallery/Testis-2 - Rakesh Kumar Majhi.jpg ');">
+            <img class="gallery-image hover-zoom" src="./img/gallery/Image Gallery/WhatsApp Image 2022-02-16 at 5.49.30 PM - Shreya Soni.jpeg" alt="Photo 1" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"  onclick="openPopupImage('./img/gallery/Image Gallery/WhatsApp Image 2022-02-16 at 5.49.30 PM - Shreya Soni.jpeg');">
+            <!-- Add more images for the Image Gallery here -->
+          </div>
+      </section>
+  </div>
+  
+    <!--]-->
+
+
+<footer class="container mx-auto flex flex-row flex-col mt-5 mb-5 md:flex-row items-start lg:rounded-xl md:rounded w-screen">
+   <div id="sign" class="basis-full w-screen" >
+  <span id="sign_light">
+    <img alt="Dr. Chandan Goswami" class="filter invert invert-0 mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+  <span id="sign_dark">
+    <img alt="Dr. Chandan Goswami" class=" mx-auto &lt;md:px-20 &lt;md:my-5" src="./img/signature.png"/>
+  </span>
+</div>
+	 
+     
+	 
+	 
+<div class="basis-full w-screen">
+  <span id="logo_light">
+    <img alt="NISER logo" class="h-30  filter invert invert-0  mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+  <span id="logo_dark">
+    <img alt="NISER logo" class="h-30 mx-auto" src="./img/niser_white_logo.png"/>
+  </span>
+</div>
+
+     <div id= "vik_sign" class=" basis-full pt-8 &lt;md:p-3 &lt;md:mx-auto">
+        Managed by
+        <a class=" contact pl-2" href="mailto:bhatiavikash999@gmail.com" target="__blank">
+         Vikash Kumar
+      </a>
+     </div>
+    </footer>
+
+
+   </main>
+  </div>
+
+<script>
+ const toggleButton = document.getElementById("toggleButton");
+const body = document.body;
+const signLight = document.getElementById("sign_light");
+const signDark = document.getElementById("sign_dark");
+const logoLight = document.getElementById("logo_light");
+const logoDark = document.getElementById("logo_dark");
+// Function to set the theme
+function setTheme(theme) {
+    if (theme === "dark") {
+        body.classList.add("dark");
+        signLight.style.display = "none";
+        signDark.style.display = "block";
+		logoLight.style.display = "none";
+        logoDark.style.display = "block";
+    } else {
+        body.classList.remove("dark");
+        signLight.style.display = "block";
+        signDark.style.display = "none";
+		logoLight.style.display = "block";
+        logoDark.style.display = "none";
+    }
+}
+
+// Toggle the theme when the button is clicked
+toggleButton.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
+// Initialize the theme based on user preference
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDarkMode) {
+    setTheme("dark");
+} else {
+    setTheme("light");
+}
+
+</script>
+  <script>
+  function openPopupImage(imageSrc) {
+    const width = 800; // Adjust the width of the popup window as needed
+    const height = 600; // Adjust the height of the popup window as needed
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+    const popupWindow = window.open(
+      imageSrc,
+      '_blank',
+      `width=${width},height=${height},left=${left},top=${top}`
+    );
+  }
+</script>
+
+
+  <script>
+   window.__INITIAL_STATE__='{"pinia":{}}'
+  </script>
+  <link href="/assets/app.2c82276b.css" rel="stylesheet"/>
+
+ </body>
+</html>
